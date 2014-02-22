@@ -1,77 +1,282 @@
-<style>
-	html,body
-	{
-		width: 100%;
-		height: 100%;
-		margin: 0px;
-		padding: 0px;
-		overflow-x: hidden; 
-	}
+<!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
+<style>
 	h1 {
-		background:#660066;
-		height:40px;
-		overflow:hidden;
-		margin:0px;
-		color:#FFFFFF;
+		background:#FF00FF;
+		height:80px;
 	}
 
 	#side_panel {
-		background:#663399;
+		background:#FF0000;
 		float:left;
-		height:600px;
+		height:500px;
 		width:200px;
 		overflow-y:scroll;
-		overflow-x:hidden;
 	}
 	
 	#content {
-		background:#D0D0D0   ;
-		height:600px;
+		background:#00FF00;
+		height:500px;
 		overflow-y:scroll;
 	}
 	
 	.tab {
-		width:200px;
-		height:30px;
+		width:150px;
+		height:50px;
 		background:#FFFFFF;
 	}
 	
 	.discovery {
 		background:#FFFFFF;
 		float:left;
-		width:370px;
-		height:186px;
-		margin:10px 0px 0px 10px;
+		width:350px;
+		height:250px;
+		margin:10px;
+	}
+        
+        .panel panel-default {
+		background:#FFFFFF;
+		float:left;
+		width:350px;
+		height:250px;
+		margin:10px;
 	}
 </style>
 
-<h1>DiscoverNU</h1>
-<div id="side_panel">
-	<div class="tab">Filter</div>
-	<div class="tab">Tab2</div>
-	<div class="tab">Tab3</div>
-	<div class="tab">Tab4</div>
-	<div class="tab">Tab1</div>
-	<div class="tab">Tab2</div>
-	<div class="tab">Tab3</div>
-	<div class="tab">Tab4</div>
-	<div class="tab">Tab1</div>
-	<div class="tab">Tab2</div>
-	<div class="tab">Tab3</div>
-	<div class="tab">Tab4</div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">DiscoverNU</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="row">
+                <div class="col-lg">
+                  <div class="input-group">
+                    <input type="text" class="form-control">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Search <span class="caret"></span></button>
+                      <ul class="dropdown-menu pull-right">
+                        <li><a href="#">Discoveries</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Users</a></li>
+                      </ul>
+                    </div><!-- /btn-group -->
+                  </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+              </div><!-- /.row -->
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Share New Discovery</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Friends</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Account Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Log out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+</head>
+
+<body>
+  <div class="col-md-2" style="overflow-y:scroll; height:700px;">
+	<div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
+      <div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
+      <div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
+      <div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
+      <div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
+      <div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
+      <div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
+      <div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
+      <div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
+      <div class="panel panel-default">
+            <div class="panel-body">
+                Filter
+                <button type="button" class="btn btn-primary btn-xs pull-right">+</button>
+            </div>
+        </div>
 </div>
-<div id="content">
-	<div class="discovery">This is a one thing</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
+      
+      
+<div class="col-md-10" style="overflow-y:scroll; height:700px;">
+    <div class="row">
+        <div class="col">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+                    <div class="caption">
+                        <h3>Beach Party</h3>
+                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+                    <div class="caption">
+                        <h3>Beach Party</h3>
+                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+                    <div class="caption">
+                        <h3>Beach Party</h3>
+                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+                    <div class="caption">
+                        <h3>Beach Party</h3>
+                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+                    <div class="caption">
+                        <h3>Beach Party</h3>
+                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+                    <div class="caption">
+                        <h3>Beach Party</h3>
+                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+                    <div class="caption">
+                        <h3>Beach Party</h3>
+                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+                    <div class="caption">
+                        <h3>Beach Party</h3>
+                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+                    <div class="caption">
+                        <h3>Beach Party</h3>
+                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
