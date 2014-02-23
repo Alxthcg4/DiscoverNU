@@ -19,6 +19,58 @@
 		margin:0px;
 		color:#FFFFFF;
 	}
+	
+<!--will use .rating for creating reviews-->	
+	.rating {
+		unicode-bidi: bidi-override;
+		direction: rtl;
+		text-align: center;
+		color: gold;
+	}
+	
+	.ratingstars {
+		float: right;
+		unicode-bidi: bidi-override;
+		direction: rtl;
+		text-align: center;
+		color: gold;
+	}
+	
+	.star {
+		unicode-bidi: bidi-override;
+		direction: rtl;
+		text-align: center;
+		color: gold;
+	}
+	
+	.star-empty {
+		unicode-bidi: bidi-override;
+		direction: rtl;
+		text-align: center;
+	}
+	
+<!-- will use this stuff when creating a review -->
+<!--
+	}
+	.rating > span {
+		display: inline-block;
+		position: relative;
+		width: 1.1em;
+	}
+		.rating > span:hover,
+		.rating > span:hover ~ span {
+		color: transparent;
+	}
+		.rating > span:hover:before,
+		.rating > span:hover ~ span:before {
+		content: "\2605";
+		position: absolute;
+		left: 0;
+		color: gold;
+	}
+	-->
+	
+	
 </style>
 
 <h1>
@@ -81,21 +133,51 @@
 				</div>
 				<br>
 			</h4>
-            <div class="panel panel-default">
-				<div class="panel-body">
+			
+
+			<div class="panel panel-default">
+				 <div class="panel-heading">Great Event! Loved it!   
+						<a class="ratingstars">
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+						</a>
+				 </div>
+				 <div class="panel-body">
 					I loved this beach party last year! There was free food provided by ASG!
-				</div>
+				 </div>
 			</div>
 			<div class="panel panel-default">
-				<div class="panel-body">
-					Terrible beach party! Don't go! The organization putting it on was not prepared for the weather conditions.
-				</div>
+				 <div class="panel-heading">Not worth it :(
+					<a class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<span class="glyphicon glyphicon-star"></span>
+					</a>
+				 </div>
+				 <div class="panel-body">
+					Wouldn't recommend it... They advertised that they would have free food but ran out after the first 30 min.
+				 </div>
 			</div>
 			<div class="panel panel-default">
-				<div class="panel-body">
+				 <div class="panel-heading">Cool party
+					<a class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+					</a>			 
+				 </div>
+				 <div class="panel-body">
 					Last year's beach party was pretty good. I would generally recommend going if you don't have anything else to do.
-				</div>
+				 </div>
 			</div>
+			
         </div>
         <div id="pane3" class="tab-pane">
             <div class="col-md-10" style="overflow-y:scroll; height: 75%; width:100%">
