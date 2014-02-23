@@ -1,3 +1,7 @@
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 <style>
 	html,body
 	{
@@ -10,59 +14,41 @@
 
 	h1 {
 		background:#660066;
-		height:40px;
+		height:15%;
+                padding:20px;
 		overflow:hidden;
 		margin:0px;
 		color:#FFFFFF;
 	}
-
-	#side_panel {
-		background:#663399;
-		float:left;
-		height:600px;
-		width:200px;
-		overflow-x:hidden;
-	}
-	
-	#content {
-		background:#D0D0D0   ;
-		height:600px;
-		overflow-y:scroll;
-	}
-	
-	.tab {
-		width:200px;
-		height:40px;
-		background:#EEEEEE;
-	}
-	
-	.discovery {
-		background:#FFFFFF;
-		float:left;
-		width:370px;
-		height:186px;
-		margin:10px 0px 0px 10px;
-	}
 </style>
 
 <h1>DiscoverNU</h1>
-<div id="side_panel">
-	<div class="tab">Tab1</div>
-	<div class="tab">Tab2</div>
-	<div class="tab">Tab3</div>
-	<div class="tab">Tab4</div>
-</div>
-<div id="content">
-	<div class="discovery">This is a one thing</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
-	<div class="discovery">This is a discovery</div>
+
+<div class="col-md-2" style="overflow-y:hidden; height: 85%; background:#E0E0E0; padding-top:10px;">
+    <div class="tabbable span12">
+    <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#pane1" data-toggle="tab">Description</a></li>
+            <li><a href="#pane2" data-toggle="tab">Reviews</a></li>
+            <li><a href="#pane3" data-toggle="tab">Photos</a></li>
+            <li><a href="#pane4" data-toggle="tab">Social</a></li>
+    </ul>
+  </div><!-- /.tabbable -->
+  </div>
+<div class="col-md-10" style="overflow-y:scroll; height: 85%">
+    <div class="tab-content">
+        <div id="pane1" class="tab-pane active">
+            <h4>The Markup</h4>
+            <pre>Code here ...</pre>
+        </div>
+        <div id="pane2" class="tab-pane">
+            <h4>Pane 2 Content</h4>
+            <p> and so on ...</p>
+        </div>
+        <div id="pane3" class="tab-pane">
+            <h4>Pane 3 Content</h4>
+        </div>
+        <div id="pane4" class="tab-pane">
+            <h4>Pane 4 Content</h4>
+        </div>
+    </div><!-- /.tab-content -->
 </div>
