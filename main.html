@@ -8,41 +8,22 @@
 		background:#FF00FF;
 		height:80px;
 	}
-
-	#side_panel {
-		background:#FF0000;
-		float:left;
-		height:500px;
-		width:200px;
-		overflow-y:scroll;
-	}
-	
-	#content {
-		background:#00FF00;
-		height:500px;
-		overflow-y:scroll;
-	}
-	
-	.tab {
-		width:150px;
-		height:50px;
-		background:#FFFFFF;
-	}
-	
-	.discovery {
-		background:#FFFFFF;
-		float:left;
-		width:350px;
-		height:250px;
-		margin:10px;
-	}
         
-        .panel panel-default {
+	.panel panel-default {
 		background:#FFFFFF;
 		float:left;
 		width:350px;
 		height:250px;
 		margin:5px;
+	}
+	
+	#modalFrame {
+		position:fixed;
+		top:70px;
+		left:240px;
+		width:80%;
+		height:85%;
+		border:0px;
 	}
 </style>
 
@@ -216,3 +197,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 </body>
+
+<!-- Modal for popups -->
+<div id="myModal" class="modal fade">
+	<iframe id="modalFrame" src="/"></iframe>
+</div>

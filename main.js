@@ -8,9 +8,11 @@ $(document).ready(function() {
     availableFilters = ["Cool","Crazy","Hip","Fun","Cultural","Outdoors","Evanston","Family-friendly","Chicago"];
     addedFilters = [];
     updateFilters();
-    $('#new_discovery').click(function(){
-        alert("Test!");
-    });
+	
+	$('#new_discovery').click(function() {
+		document.getElementById("modalFrame").src = "popup.html";
+		$('#myModal').modal('show');
+	});
 });
 
 function updateFilters() {
