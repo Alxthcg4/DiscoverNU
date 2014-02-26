@@ -17,7 +17,7 @@
 		margin:5px;
 	}
 	
-	#modalFrame {
+	.modalFrame {
 		position:fixed;
 		left:5%;
 		top:5%;
@@ -79,9 +79,10 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="Account.html" data-toggle="modal">Profile</a></li>
-                <li><a href="#">Friends</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Account Settings</a></li>
+				<li><a href="Account.html#pane2" data-toggle="modal">Uploads</a></li>
+				<li><a href="Account.html#pane3" data-toggle="modal">Calendar</a></li>
+				<li><a href="Account.html#pane4" data-toggle="modal">Friends</a></li>
+                <li><a href="Account.html#pane5" data-toggle="modal">Settings</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Log out</a></li>
               </ul>
@@ -128,6 +129,4 @@
 </body>
 
 <!-- Modal for popups -->
-<div id="myModal" class="modal fade">
-	<iframe id="modalFrame" src="/"></iframe>
-</div>
+<div id="myModal" class="modal fade"></div>

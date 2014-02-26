@@ -17,7 +17,9 @@ $(document).ready(function() {
     updateFilters(new Array());
 	$('[data-toggle="modal"]').click(function() {
 		var url = $(this).attr('href');
-		document.getElementById("modalFrame").src = url;
+		$("#myModal").empty();
+		$("#myModal").append("<iframe src='" + url + "' class='modalFrame' />");
+
 		$('#myModal').modal('show');
 	});
 });
