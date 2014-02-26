@@ -20,6 +20,10 @@
 		color:#FFFFFF;
 	}
 	
+	#DiscovName {
+		
+	}
+	
 <!--will use .rating for creating reviews-->	
 	.rating {
 		unicode-bidi: bidi-override;
@@ -49,29 +53,8 @@
 		text-align: center;
 	}
 
-	#side_panel {
-		overflow-y:hidden;
-		overflow-x:hidden;
-		background:#E0E0E0;
-		padding:10px;
-		height:75%;
-		width:150px;
-		float:left;
-	}
-	
-	#content {
-		overflow-y:scroll;
-		padding:10px;
-		height:75%;
-		float:left;
-		
-		width: -moz-calc(100% - 150px);
-		width: -webkit-calc(100% - 150px);
-		width: calc(100% - 150px);
-	}
 <!-- will use this stuff when creating a review -->
-<!--
-	}
+
 	.rating > span {
 		display: inline-block;
 		position: relative;
@@ -88,24 +71,25 @@
 		left: 0;
 		color: gold;
 	}
-	-->
+	
 	
 	
 </style>
 
 <h1>
-	<div class="col" style="width:50%; float:left; ">
-		Beach Party
+	<div class="col" style="width:50%; float:left; vertical-align:middle">
+		
+		<form class="form-inline" role="form" style="vertical-align:middle">
+			<input type="name" class="form-control" id="DiscovName" placeholder="Enter discovery name" style="vertical-align:middle">
+		</form>
+		
 	</div>
 	<div class="col" style="float:right">
 		<img src="images/beach.jpg" alt="..." class="img-thumbnail">
 	</div>
-	<div class="col" style=width: 20%; float: left">
-		<button type="button" class="btn btn-success" style="float:right">Bookmark</button>
-	</div>
 </h1>
 
-<div class="col-md-2" id="side_panel">
+<div class="col-md-2" style= "overflow-x:hidden; overflow-y:hidden; height: 75%; background:#E0E0E0; padding-top:10px;">
     <div class="tabbable span12">
     <ul class="nav nav-pills nav-stacked">
             <li class="active"><a href="#pane1" data-toggle="tab">Description</a></li>
@@ -116,7 +100,7 @@
 		<img src="http://www.3g.co.uk/g_phones/large/google-maps-returns-to-apple-devices-1.jpg" alt="map">
   </div><!-- /.tabbable -->
   </div>
-<div class="col-md-10" id="content">
+<div class="col-md-10">
     <div class="tab-content">
         <div id="pane1" class="tab-pane active">
             <h4 style="width:100%; height: 15%">
@@ -135,37 +119,38 @@
 					</span>
 			</div>
 			<div style="float:left; width: 70%; height: 85%">
-				Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!<br><br>
-				Food will be provided by Lou Malnati's!<br><br>
-				Sponsored by ASG
+				<textarea class="form-control" rows="3" placeholder="Enter a description of the event"></textarea>
 			</div>
         </div>
         <div id="pane2" class="tab-pane">
             <h4>
-				<div style="width: 60%">
-        			Sort by:
-        			<button class="btn">Highest Rating</button>
-					<button class="btn">Lowest Rating</button>
-        			<button class="btn">Newest</button>
-        			<button class="btn">Oldest</button>
-        		</div>
+        		<form role="form" class="form-group">
+					<input type="reviewTitle" class="form-control" id="reviewTitle" placeholder="Enter Review Title">
+				</form>
 				<br>
-				<div>
-					<button class="btn">Add Review +</button>
-				</div>
+					Rate This Discovery
+					
+					<p class="rating">
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<span class="glyphicon glyphicon-star-empty"></span>
+					</p>
+					
 				<br>
 			</h4>
 			
 
 			<div class="panel panel-default">
 				 <div class="panel-heading">Great Event! Loved it!   
-						<a class="ratingstars">
+						<p class="ratingstars">
 							<span class="glyphicon glyphicon-star"></span>
 							<span class="glyphicon glyphicon-star"></span>
 							<span class="glyphicon glyphicon-star"></span>
 							<span class="glyphicon glyphicon-star"></span>
 							<span class="glyphicon glyphicon-star"></span>
-						</a>
+						</p>
 				 </div>
 				 <div class="panel-body">
 					I loved this beach party last year! There was free food provided by ASG!
@@ -173,13 +158,13 @@
 			</div>
 			<div class="panel panel-default">
 				 <div class="panel-heading">Not worth it :(
-					<a class="ratingstars">
+					<p class="ratingstars">
 						<span class="glyphicon glyphicon-star-empty"></span>
 						<span class="glyphicon glyphicon-star-empty"></span>
 						<span class="glyphicon glyphicon-star-empty"></span>
 						<span class="glyphicon glyphicon-star-empty"></span>
 						<span class="glyphicon glyphicon-star"></span>
-					</a>
+					</p>
 				 </div>
 				 <div class="panel-body">
 					Wouldn't recommend it... They advertised that they would have free food but ran out after the first 30 min.
@@ -187,13 +172,13 @@
 			</div>
 			<div class="panel panel-default">
 				 <div class="panel-heading">Cool party
-					<a class="ratingstars">
+					<p class="ratingstars">
 						<span class="glyphicon glyphicon-star-empty"></span>
 						<span class="glyphicon glyphicon-star-empty"></span>
 						<span class="glyphicon glyphicon-star"></span>
 						<span class="glyphicon glyphicon-star"></span>
 						<span class="glyphicon glyphicon-star"></span>
-					</a>			 
+					</p>			 
 				 </div>
 				 <div class="panel-body">
 					Last year's beach party was pretty good. I would generally recommend going if you don't have anything else to do.
@@ -202,7 +187,7 @@
 			
         </div>
         <div id="pane3" class="tab-pane">
-            <div class="col-md-10" style="height: 75%; width:100%">
+            <div class="col-md-10" style="overflow-y:scroll; height: 75%; width:100%">
 				<div class="row">
 					<div class="col">
 						<div class="col-sm-6 col-md-4">
