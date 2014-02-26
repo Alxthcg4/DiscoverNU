@@ -96,6 +96,11 @@
             <li><a href="#pane2" data-toggle="tab">Reviews</a></li>
             <li><a href="#pane3" data-toggle="tab">Photos</a></li>
             <li><a href="#pane4" data-toggle="tab">Social</a></li>
+
+			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+				Publish
+			</button>
+
     </ul>
 		<img src="http://www.3g.co.uk/g_phones/large/google-maps-returns-to-apple-devices-1.jpg" alt="map">
   </div><!-- /.tabbable -->
@@ -125,7 +130,7 @@
         <div id="pane2" class="tab-pane">
             <h4>
         		<form role="form" class="form-group">
-					<input type="reviewTitle" class="form-control" id="reviewTitle" placeholder="Enter Review Title">
+					<input type="reviewTitle" class="form-control" id="reviewTitle" placeholder="Enter your review title">
 				</form>
 				<br>
 					Rate This Discovery
@@ -140,51 +145,7 @@
 					
 				<br>
 			</h4>
-			
-
-			<div class="panel panel-default">
-				 <div class="panel-heading">Great Event! Loved it!   
-						<p class="ratingstars">
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-						</p>
-				 </div>
-				 <div class="panel-body">
-					I loved this beach party last year! There was free food provided by ASG!
-				 </div>
-			</div>
-			<div class="panel panel-default">
-				 <div class="panel-heading">Not worth it :(
-					<p class="ratingstars">
-						<span class="glyphicon glyphicon-star-empty"></span>
-						<span class="glyphicon glyphicon-star-empty"></span>
-						<span class="glyphicon glyphicon-star-empty"></span>
-						<span class="glyphicon glyphicon-star-empty"></span>
-						<span class="glyphicon glyphicon-star"></span>
-					</p>
-				 </div>
-				 <div class="panel-body">
-					Wouldn't recommend it... They advertised that they would have free food but ran out after the first 30 min.
-				 </div>
-			</div>
-			<div class="panel panel-default">
-				 <div class="panel-heading">Cool party
-					<p class="ratingstars">
-						<span class="glyphicon glyphicon-star-empty"></span>
-						<span class="glyphicon glyphicon-star-empty"></span>
-						<span class="glyphicon glyphicon-star"></span>
-						<span class="glyphicon glyphicon-star"></span>
-						<span class="glyphicon glyphicon-star"></span>
-					</p>			 
-				 </div>
-				 <div class="panel-body">
-					Last year's beach party was pretty good. I would generally recommend going if you don't have anything else to do.
-				 </div>
-			</div>
-			
+				<textarea class="form-control" rows="3" placeholder="Enter your review here"></textarea>
         </div>
         <div id="pane3" class="tab-pane">
             <div class="col-md-10" style="overflow-y:scroll; height: 75%; width:100%">
@@ -354,6 +315,19 @@
 			<br><br>
 			
         </div>
+		
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						Your Discovery has Been Published!
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Okay</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		
     </div><!-- /.tab-content -->
 </div>
