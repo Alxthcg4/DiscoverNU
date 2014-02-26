@@ -15,8 +15,9 @@ $(document).ready(function() {
     addedFilters = [];
 
     updateFilters(new Array());
-	$('#new_discovery').click(function() {
-		document.getElementById("modalFrame").src = "popup.html";
+	$('[data-toggle="modal"]').click(function() {
+		var url = $(this).attr('href');
+		document.getElementById("modalFrame").src = url;
 		$('#myModal').modal('show');
 	});
 });
