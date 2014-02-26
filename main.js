@@ -14,7 +14,7 @@ $(document).ready(function() {
     availableFilters = [new filter("Outdoors",["Sports,Cheap"]), new filter ("Cheap",["Outdoors,Sale"]), new filter ("Sports",["Group,Outdoors"]), new filter ("Group",["Sale,Outdoors"]), new filter ("Sale",["Cheap,Group"])];
     addedFilters = [];
 
-    updateFilters();
+    updateFilters(new Array());
 	$('#new_discovery').click(function() {
 		document.getElementById("modalFrame").src = "popup.html";
 		$('#myModal').modal('show');
@@ -22,33 +22,32 @@ $(document).ready(function() {
 });
 
 function updateFilters(relatedFilters) {
-    currentFilters = ""; $("#filters").html("");
-    for (var i = 0;i<addedFilters.length;i++) {
-        currentFilters = $("#filters").html();
-        $("#filters").html(currentFilters+
-            "<div class=\"panel panel-success\"><div class=\"panel-heading\">"+addedFilters[i].name+"<button type=\"button\" id=\""+i+"\" class=\"btn btn-primary btn-xs pull-right filter_minus\">-</button></div></div>");
+    topFilters = ""; $("#filters").html("");
+    for (var i = addedFilters.length-1;i>=0;i++) {
+        topFilters = ["<div class=\"panel panel-success\"><div class=\"panel-heading\">"+addedFilters[i].name+"<button type=\"button\" id=\""+i+"\" class=\"btn btn-primary btn-xs pull-right filter_minus\">-</button></div></div>"+topFilters];
     }
-    topFilters = "";
+    sortedFilters = ""; bottomFilters = "";
     for (var j = availableFilters.length-1;j>=0;j--) {
         if (findEqualName(availableFilters[j],relatedFilters)) {
-            topFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+j+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+topFilters];
+            sortedFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+j+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+sortedFilters];
+            alert(sortedFilters);
             moveToFront(availableFilters,j); j--;
         } else {
             bottomFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+j+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+bottomFilters];
         }
-        $("#filters").html(topFilters+bottomFilters);
+        $("#filters").html(topFilters+sortedFilters+bottomFilters);
     }
     $(".filter_plus").click(function() {
         index = parseInt($(this).attr('id'));
         addedFilters.push(availableFilters[index]);
         availableFilters.splice(index,1);
-        updateFilters();
+        updateFilters(availableFilters[index]);
     });
     $(".filter_minus").click(function() {
         index = parseInt($(this).attr('id'));
         availableFilters.push(addedFilters[index]);
         addedFilters.splice(index,1);
-        updateFilters();
+        updateFilters(new Array());
     });
 }
 
