@@ -44,13 +44,6 @@ $(document).ready(function() {
 
     updateFilters(new Array());
     updateDiscoveries(new Array());
-    $('[data-toggle="modal"]').click(function() {
-	var url = $(this).attr('href');
-	$("#myModal").empty();
-	$("#myModal").append("<iframe src='" + url + "' class='modalFrame' />");
-
-	$('#myModal').modal('show');
-    });
 });
 
 function updateFilters(relatedFilters) {
@@ -119,6 +112,13 @@ function updateDiscoveries(relatedTags) {
             $("#discoveries").html(sortedDiscoveries+bottomDiscoveries);
         }
     }
+    $('[data-toggle="modal"]').click(function() {
+	var url = $(this).attr('href');
+	$("#myModal").empty();
+	$("#myModal").append("<iframe src='" + url + "' class='modalFrame' />");
+
+	$('#myModal').modal('show');
+    });
 }
 
 function removeA(arr) {
