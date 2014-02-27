@@ -38,7 +38,7 @@ $(document).ready(function() {
         new discovery("Wine Tasting","wine.jpg",["Indoors","Group","Late Night"],"Come and experience a romantic and glamourous night of wine tasting! Learn how to be a wine pro!"),
         new discovery("Concert","concert.jpg",["Indoors","Music","Late Night"],"Watch and listen to that band that's really popular right now in this amazing live concert here at NU!"),
         new discovery("Dinner for 12","dinner.jpg",["Indoors","Group","Food","Fancy"],"Join 11 other NU faculty and students for an enriching discussion and delicious, fancy meal!"),
-        new discovery("Symphony","symphony.jpg",["Indoors","Fancy","Late Night"],"The Chicago Symphony Orchestra will be visiting Bienen School of Music for a live concert! Don't miss it!")
+        new discovery("Symphony","symphony.jpg",["Indoors","Fancy","Late Night","Music"],"The Chicago Symphony Orchestra will be visiting Bienen School of Music for a live concert! Don't miss it!")
     ];
     orig_discoveries = discoveries;
 
