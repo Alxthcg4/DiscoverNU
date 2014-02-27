@@ -21,7 +21,6 @@
 	.friend-description{
 		width: 85%;
 		text-indent: 20px;
-		margin: 10px 0px 0px 10px;
 		font-size: 18px;
 	}
 
@@ -79,14 +78,14 @@
         	<h4>
         		<span style="width: 60%">
         			Sort by:
+        			<button type="button" class="btn">Highest Rating</button>
+        			<button type="button" class="btn">Lowest Rating</button>        			
         			<button type="button" class="btn">Newest</button>
         			<button type="button" class="btn">Oldest</button>
-        			<button type="button" class="btn">Highest Rating</button>
-        			<button type="button" class="btn">Lowest Rating</button>
         			<button type="button" class="btn">Title</button>
         		</span>  			
                 <span class="input-group" style="width: 50%; float: right">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" placeholder="Enter a discovery's name">
                     <div class="input-group-btn">
                       <button type="button" class="btn btn-default">Search</button>
                     </div><!-- /btn-group -->
@@ -199,14 +198,14 @@
         	<h4>
         		<span style="width: 60%">
         			Sort by:
+        			<button type="button" class="btn">Highest Rating</button>
+        			<button type="button" class="btn">Lowest Rating</button>        			
         			<button type="button" class="btn">Newest</button>
         			<button type="button" class="btn">Oldest</button>
-        			<button type="button" class="btn">Highest Rating</button>
-        			<button type="button" class="btn">Lowest Rating</button>
         			<button type="button" class="btn">Title</button>
         		</span>  			
                 <span class="input-group" style="width: 50%; float: right">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" placeholder="Enter a discovery's name">
                     <div class="input-group-btn">
                       <button type="button" class="btn btn-default">Search</button>
                     </div><!-- /btn-group -->
@@ -322,76 +321,67 @@
         <div id="pane4" class="tab-pane">
             <h6>
         		<span style="width: 60%">
-        			<button type="button" class="btn">+ Add Friend</button>
+        			<button type="button" class="btn">Add Friend +</button>
         		</span>  			
                 <span class="input-group" style="width: 80%; float: right">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" placeholder="Enter a friend's name">
                     <div class="input-group-btn">
                       <button type="button" class="btn btn-default">Search</button>
                     </div><!-- /btn-group -->
                 </span><!-- /input-group -->
         	</h6>
         	<div class="col" style="overflow-y:scroll; height: 88%; padding: 5px">
-        		<div class="friend" style="border-style: solid; height: 185px; float: left">
-			        <div class="thumbnail" style="width: 20%; float: left">
-			            <img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson" class="img-thumbnail">
-			        </div>        
-			        <div class="friend-description">
-			            	<h7>Bob Johnson</h7>
-			            	<p> Hello, I am a single father of two ...</p>
-			        </div>
-			        <div style="float: right">   
-			        	<span style="padding: 1px"> 	
-			        		<button type="button" class="btn">Discoveries</button>
-			        	</span>
-			        	<span style="padding: 1px">
-			            	<button type="button" class="btn">Bookmarks</button>
-			            </span>
-			            <span style="padding: 1px">
-			            	<button type="button" class="btn">REMOVE</button>
-			            </span>
-			        </div>
-			    </div>
-			    <div class="friend" style="border-style: solid; height: 185px; float: left">
-			        <div class="thumbnail" style="width: 20%; float: left">
-			            <img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson" class="img-thumbnail">
-			        </div>        
-			        <div class="friend-description">
-			            	<h7>Bob Johnson</h7>
-			            	<p> Hello, I am a single father of two ...</p>
-			        </div>
-			        <div style="float: right">   
-			        	<span style="padding: 1px"> 	
-			        		<button type="button" class="btn">Discoveries</button>
-			        	</span>
-			        	<span style="padding: 1px">
-			            	<button type="button" class="btn">Bookmarks</button>
-			            </span>
-			            <span style="padding: 1px">
-			            	<button type="button" class="btn">REMOVE</button>
-			            </span>
-			        </div>
-			    </div>
-			    <div class="friend" style="border-style: solid; height: 185px; float: left">
-			        <div class="thumbnail" style="width: 20%; float: left">
-			            <img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson" class="img-thumbnail">
-			        </div>        
-			        <div class="friend-description">
-			            	<h7>Bob Johnson</h7>
-			            	<p> Hello, I am a single father of two ...</p>
-			        </div>
-			        <div style="float: right">   
-			        	<span style="padding: 1px"> 	
-			        		<button type="button" class="btn">Discoveries</button>
-			        	</span>
-			        	<span style="padding: 1px">
-			            	<button type="button" class="btn">Bookmarks</button>
-			            </span>
-			            <span style="padding: 1px">
-			            	<button type="button" class="btn">REMOVE</button>
-			            </span>
-			        </div>
-			    </div>
+        		<div class="well media">
+					<a class="pull-left" href="#" style="width: 20%">
+						<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson" class="img-thumbnail media-object">
+					</a>
+					<div class="media-body">
+						<div style="margin: 5px; float: right">
+				        	<button type="button" class="btn btn-default btn-block">Discoveries</button>   
+				        	<button type="button" class="btn btn-default btn-block">Bookmarks</button>
+				        	<button type="button label" class="btn btn-block label-danger">REMOVE</button>
+						</div>
+						<div class="friend-description">
+				            <h7>Bob Johnson</h7>
+				            <p> Hello, I am a single father of two ...</p>
+				        </div>
+				        
+					</div>
+				</div>
+				<div class="well media">
+					<a class="pull-left" href="#" style="width: 20%">
+						<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson" class="img-thumbnail media-object">
+					</a>
+					<div class="media-body">
+						<div style="margin: 5px; float: right">
+				        	<button type="button" class="btn btn-default btn-block">Discoveries</button>   
+				        	<button type="button" class="btn btn-default btn-block">Bookmarks</button>
+				        	<button type="button label" class="btn btn-block label-danger">REMOVE</button>
+						</div>
+						<div class="friend-description">
+				            <h7>Bob Johnson</h7>
+				            <p> Hello, I am a single father of two ...</p>
+				        </div>
+				        
+					</div>
+				</div>
+				<div class="well media">
+					<a class="pull-left" href="#" style="width: 20%">
+						<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson" class="img-thumbnail media-object">
+					</a>
+					<div class="media-body">
+						<div style="margin: 5px; float: right">
+				        	<button type="button" class="btn btn-default btn-block">Discoveries</button>   
+				        	<button type="button" class="btn btn-default btn-block">Bookmarks</button>
+				        	<button type="button label" class="btn btn-block label-danger">REMOVE</button>
+						</div>
+						<div class="friend-description">
+				            <h7>Bob Johnson</h7>
+				            <p> Hello, I am a single father of two ...</p>
+				        </div>
+				        
+					</div>
+				</div>
 		    </div>
         </div>
         <div id="pane5" class="tab-pane">
