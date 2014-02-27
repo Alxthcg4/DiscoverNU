@@ -16,6 +16,14 @@
 		height:250px;
 		margin:5px;
 	}
+        
+        #filters {
+            overflow-y:scroll;  width:17%; height: 90%; background:#E0E0E0; padding-top:10px;
+        }
+        
+        #discoveries {
+            overflow-y:scroll; width:83%; height:90%; padding:2px;
+        }
 	
 	.modalFrame {
 		position:fixed;
@@ -34,6 +42,25 @@
 		color: gold;
 	}
 	
+        .discovery {
+                width:285px;
+                height:310px;
+                float:left;
+                margin: 4px;
+        }
+        .discovery_image {
+                padding:3px;
+                height:195px;
+        }
+        .discovery_body {
+                padding:10px;
+                padding-top:0px;
+                font-size:14;
+        }
+        .discovery_date {
+            position:relative; bottom:175px; right:15px;
+            background-color:#0099FF;
+        }
 </style>
 
 <head>
@@ -94,32 +121,11 @@
 </head>
 
 <body>
-  <div class="col-md-2" id="filters" style="overflow-y:scroll; height: 85%; background:#E0E0E0; padding-top:10px;">
+  <div class="col-md-2" id="filters">
   </div>
       
       
-<div class="col-md-10" style="overflow-y:scroll; height: 85%">
-    <div class="row">
-        <div class="col">
-            <div class="col-sm-6 col-md-4" href="Discoveries.html" data-toggle="modal">
-                <div class="thumbnail">
-                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-                    <div class="caption">
-                        <h3>Beach Party
-						<p class="ratingstars">
-							<span class="glyphicon glyphicon-star-empty"></span>
-							<span class="glyphicon glyphicon-star-empty"></span>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-						</p>	
-						</h3>
-                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="col-md-10" id="discoveries">
 </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
