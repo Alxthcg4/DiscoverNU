@@ -11,7 +11,7 @@ function filter(name, related) {
 
 $(document).ready(function() {
     
-    availableFilters = [new filter("Outdoors",["Sports,Cheap"]), new filter ("Cheap",["Outdoors,Sale"]), new filter ("Sports",["Group,Outdoors"]), new filter ("Group",["Sale,Outdoors"]), new filter ("Sale",["Cheap,Group"])];
+    availableFilters = [new filter("Outdoors",["Sports","Cheap"]), new filter ("Cheap",["Outdoors","Sale"]), new filter ("Sports",["Group","Outdoors"]), new filter ("Group",["Sale","Outdoors"]), new filter ("Sale",["Cheap","Group"])];
     addedFilters = [];
 
     updateFilters(new Array());
@@ -26,32 +26,46 @@ $(document).ready(function() {
 
 function updateFilters(relatedFilters) {
     topFilters = ""; $("#filters").html("");
-    for (var i = addedFilters.length-1;i>=0;i++) {
-        topFilters = ["<div class=\"panel panel-success\"><div class=\"panel-heading\">"+addedFilters[i].name+"<button type=\"button\" id=\""+i+"\" class=\"btn btn-primary btn-xs pull-right filter_minus\">-</button></div></div>"+topFilters];
+    for (var i = 0;i<addedFilters.length;i++) {
+        topFilters = ["<div class=\"panel panel-success\"><div class=\"panel-heading\">"+addedFilters[i].name+"<button type=\"button\" id=\""+addedFilters[i].name+"\" class=\"btn btn-primary btn-xs pull-right filter_minus\">-</button></div></div>"+topFilters];
     }
     sortedFilters = ""; bottomFilters = "";
-    for (var j = availableFilters.length-1;j>=0;j--) {
-        if (findEqualName(availableFilters[j],relatedFilters)) {
-            sortedFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+j+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+sortedFilters];
-            alert(sortedFilters);
-            moveToFront(availableFilters,j); j--;
+    endIndex = 0;
+    for (var j = availableFilters.length-1;j>=endIndex;j--) {
+        if (findEqualName(availableFilters[j].name,relatedFilters)) {
+            sortedFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+availableFilters[j].name+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+sortedFilters];
+            moveToFront(availableFilters,j); j++; endIndex++;
         } else {
-            bottomFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+j+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+bottomFilters];
+            bottomFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+availableFilters[j].name+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+bottomFilters];
         }
         $("#filters").html(topFilters+sortedFilters+bottomFilters);
     }
+    output = "";
+    for (var p = 0;p<availableFilters.length;p++) {
+        output = output+","+availableFilters[p].name;
+    }
     $(".filter_plus").click(function() {
-        index = parseInt($(this).attr('id'));
-        addedFilters.push(availableFilters[index]);
-        availableFilters.splice(index,1);
-        updateFilters(availableFilters[index]);
+        plus_filter_function($(this).attr('id'))
+        
     });
     $(".filter_minus").click(function() {
-        index = parseInt($(this).attr('id'));
-        availableFilters.push(addedFilters[index]);
-        addedFilters.splice(index,1);
-        updateFilters(new Array());
+        minus_filter_function($(this).attr('id'))
     });
+}
+
+function plus_filter_function(name) {
+    index = findIndex(name,availableFilters);
+    addedFilters.push(availableFilters[index]);
+    new_related_filters = availableFilters[index].related;
+    availableFilters.splice(index,1);
+    updateFilters(new_related_filters);
+}
+
+function minus_filter_function(name) {
+    index = findIndex(name,addedFilters);
+    availableFilters.push(addedFilters[index]);
+    addedFilters.splice(index,1);
+    updateFilters(new Array());
 }
 
 function removeA(arr) {
@@ -70,12 +84,21 @@ function moveToFront(target_array, index) {
     target_array.unshift(temp);
 }
 
-function findEqualName(element,target_array) {
+function findEqualName(name,target_array) {
     boolean = false;
     for (var i = 0;i<target_array.length;i++) {
-        if (element.name == target_array[i].name) {
-            boolean = true; break;
+        if (name == target_array[i]) {
+            boolean = true;
         }
     }
     return boolean;
+}
+
+function findIndex(name,target_array) {
+    for (var i = 0;i<target_array.length;i++) {
+        if (name == target_array[i].name) {
+            index = i;
+        }
+    }
+    return index;
 }
