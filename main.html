@@ -4,6 +4,12 @@
 <script src="main.js"></script>
 
 <style>
+	html,body {
+		height:100%;
+		padding:0;
+		margin:0;
+	}
+
 	h1 {
 		background:#FF00FF;
 		height:80px;
@@ -17,13 +23,27 @@
 		margin:5px;
 	}
         
-        #filters {
-            overflow-y:scroll;  width:17%; height: 90%; background:#E0E0E0; padding-top:10px;
-        }
-        
-        #discoveries {
-            overflow-y:scroll; width:83%; height:90%; padding:2px;
-        }
+	#filters {
+		overflow-y:scroll;
+		width:17%;
+		height: 90%;
+		background:#E0E0E0;
+		padding-top:10px;
+		
+		height: -moz-calc(100% - 90px);
+		height: -webkit-calc(100% - 90px);
+		height: calc(100% - 90px);
+	}
+	
+	#discoveries {
+		overflow-y:scroll;
+		width:83%;
+		padding:2px;
+		
+		height: -moz-calc(100% - 90px);
+		height: -webkit-calc(100% - 90px);
+		height: calc(100% - 90px);
+	}
 	
 	.modalFrame {
 		position:fixed;
@@ -42,25 +62,25 @@
 		color: gold;
 	}
 	
-        .discovery {
-                width:285px;
-                height:310px;
-                float:left;
-                margin: 4px;
-        }
-        .discovery_image {
-                padding:3px;
-                height:195px;
-        }
-        .discovery_body {
-                padding:10px;
-                padding-top:0px;
-                font-size:14;
-        }
-        .discovery_date {
-            position:relative; bottom:175px; right:15px;
-            background-color:#0099FF;
-        }
+	.discovery {
+			width:285px;
+			height:310px;
+			float:left;
+			margin: 4px;
+	}
+	.discovery_image {
+			padding:3px;
+			height:195px;
+	}
+	.discovery_body {
+			padding:10px;
+			padding-top:0px;
+			font-size:14;
+	}
+	.discovery_date {
+		position:relative; bottom:175px; right:15px;
+		background-color:#0099FF;
+	}
 </style>
 
 <head>
