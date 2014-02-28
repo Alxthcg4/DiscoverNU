@@ -3,91 +3,13 @@
 <script src="http://code.jquery.com/jquery-1.5.min.js"></script>
 <script src="main.js"></script>
 
-<style>
-	html,body {
-		height:100%;
-		padding:0;
-		margin:0;
-	}
-
-	h1 {
-		background:#FF00FF;
-		height:80px;
-	}
-        
-	.panel panel-default {
-		background:#FFFFFF;
-		float:left;
-		width:350px;
-		height:250px;
-		margin:5px;
-	}
-        
-	#filters {
-		overflow-y:scroll;
-		width:17%;
-		height: 90%;
-		background:#E0E0E0;
-		padding-top:10px;
-		
-		height: -moz-calc(100% - 90px);
-		height: -webkit-calc(100% - 90px);
-		height: calc(100% - 90px);
-	}
-	
-	#discoveries {
-		overflow-y:scroll;
-		width:83%;
-		padding:2px;
-		
-		height: -moz-calc(100% - 90px);
-		height: -webkit-calc(100% - 90px);
-		height: calc(100% - 90px);
-	}
-	
-	.modalFrame {
-		position:fixed;
-		left:5%;
-		top:5%;
-		width:90%;
-		height:90%;
-		border:0px;
-	}
-	
-	.ratingstars {
-		float: right;
-		unicode-bidi: bidi-override;
-		direction: rtl;
-		text-align: center;
-		color: gold;
-	}
-	
-	.discovery {
-			width:24%;
-			height:310px;
-			float:left;
-			margin: 4px;
-	}
-	.discovery_image {
-			padding:3px;
-	}
-	.discovery_body {
-			padding:10px;
-			padding-top:0px;
-			font-size:14;
-			overflow-y:hidden;
-	}
-	.discovery_date {
-		position:relative; bottom:170px; right:5px;
-		background-color:#0099FF;
-	}
-</style>
+<link rel="stylesheet" type="text/css" href="main.css">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <nav class="navbar navbar-inverse" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation" id="main_bar">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -97,12 +19,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">DiscoverNU</a>
+          <a class="navbar-brand" href="main.html" id="home_link">DiscoverNU</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <form class="navbar-form navbar-left" role="search">
+          <form class="navbar-form navbar-left" role="search" style="width:50%">
             <div class="row">
                 <div class="col-lg">
                   <div class="input-group">

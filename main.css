@@ -1,0 +1,93 @@
+html,body {
+	height:100%;
+	padding:0;
+	margin:0;
+}
+
+#main_bar {
+	background:#660066;
+}
+	
+.panel panel-default {
+	background:#FFFFFF;
+	float:left;
+	width:350px;
+	height:250px;
+	margin:5px;
+	padding:0px;
+}
+
+.navbar .nav > li > a {
+	color:  #FFFFFF;
+}
+
+.navbar .nav  > li > a:hover {
+	color: #FFDE6D;
+}
+
+#home_link {
+	color:  #FFFFFF;
+}
+
+#home_link:hover {
+	color:  #FFDE6D;
+}
+
+#filters {
+	overflow-y:scroll;
+	width:17%;
+	height: 90%;
+	background:#E0E0E0;
+	padding-top:10px;
+	
+	height: -moz-calc(100% - 90px);
+	height: -webkit-calc(100% - 90px);
+	height: calc(100% - 90px);
+}
+
+#discoveries {
+	overflow-y:scroll;
+	width:83%;
+	padding:2px;
+	
+	height: -moz-calc(100% - 90px);
+	height: -webkit-calc(100% - 90px);
+	height: calc(100% - 90px);
+}
+
+.modalFrame {
+	position:fixed;
+	left:5%;
+	top:5%;
+	width:90%;
+	height:90%;
+	border:0px;
+}
+
+.ratingstars {
+	float: right;
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	text-align: center;
+	color: gold;
+}
+
+.discovery {
+		width:24%;
+		height:310px;
+		float:left;
+		margin: 4px;
+}
+.discovery_image {
+		padding:3px;
+}
+.discovery_body {
+		padding:10px;
+		padding-top:0px;
+		font-size:14;
+		overflow-y:hidden;
+}
+.discovery_date {
+	position:relative; top:; right:5px;
+	background-color:#0099FF;
+}
