@@ -38,7 +38,10 @@ $(document).ready(function() {
         new discovery("Wine Tasting","wine.jpg",["Indoors","Group","Late Night"],"Come and experience a romantic and glamourous night of wine tasting! Learn how to be a wine pro!"),
         new discovery("Concert","concert.jpg",["Indoors","Music","Late Night"],"Watch and listen to that band that's really popular right now in this amazing live concert here at NU!"),
         new discovery("Dinner for 12","dinner.jpg",["Indoors","Group","Food","Fancy"],"Join 11 other NU faculty and students for an enriching discussion and delicious, fancy meal!"),
-        new discovery("Symphony","symphony.jpg",["Indoors","Fancy","Late Night","Music"],"The Chicago Symphony Orchestra will be visiting Bienen School of Music for a live concert! Don't miss it!")
+        new discovery("Symphony","symphony.jpg",["Indoors","Fancy","Late Night","Music"],"The Chicago Symphony Orchestra will be visiting Bienen School of Music for a live concert! Don't miss it!"),
+        new discovery("Clothing Sale","shopping.jpg",["Sale","Indoors","Cheap"],"Come to the biggest sale event at the Chicago Water Tower! All stores will be giving discounted prices!"),
+        new discovery("Barbeque","barbeque.jpg",["Outdoors","Food","Group"],"Slivka is hosting an outdoors barbeque together with CCI to promote interdorm relations! Join us!"),
+        new discovery("Intramural Basketball","basketball.jpg",["Indoors","Sports","Group"],"Join your neighbours at Plex for a friendly and fun game of intramural basketball! All are welcome!")
     ];
     orig_discoveries = discoveries;
 
