@@ -1,20 +1,10 @@
-<link href="css/bootstrap.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="DiscoverNU.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 <style>
-        
-	html,body
-	{
-		width: 100%;
-		height: 100%;
-		margin: 0px;
-		padding: 0px;
-		overflow-x: hidden;
-                font-family: 'Roboto', sans-serif;
-	}
-
 	h1 {
 		background:#4E015C;
 		height:25%;
@@ -29,11 +19,14 @@
         width: 75%;
         font-size:50;
 	}
-        
         #discovDetails {
             margin-top:10px;
             font-size:18;
 	}
+        
+        .img-thumbnail {
+            margin: 5px;
+        }
         
         .tag {
             margin:10px;
@@ -43,50 +36,31 @@
 	
 <!--will use .rating for creating reviews-->	
 	.rating {
-		unicode-bidi: bidi-override;
-		direction: rtl;
-		text-align: center;
-		color: gold;
+		unicode-bidi: bidi-override; direction: rtl; text-align: center; color: gold;
 	}
-	
 	.ratingstars {
-		float: right;
-		unicode-bidi: bidi-override;
-		direction: rtl;
-		text-align: center;
-		color: gold;
+		float: right; unicode-bidi: bidi-override; direction: rtl; text-align: center; color: gold;
 	}
-	
 	.star {
-		unicode-bidi: bidi-override;
-		direction: rtl;
-		text-align: center;
-		color: gold;
+		unicode-bidi: bidi-override; direction: rtl; text-align: center;color: gold;
 	}
-	
 	.star-empty {
-		unicode-bidi: bidi-override;
-		direction: rtl;
-		text-align: center;
+		unicode-bidi: bidi-override; direction: rtl; text-align: center;
 	}
 
 	#side_panel {
-		overflow-y:hidden;
-		overflow-x:hidden;
-		background:#E0E0E0;
-		padding:10px;
-		height:75%;
-		width:20%;
+		overflow-y:hidden; overflow-x:hidden;
+		background:#E0E0E0; padding:10px;
+		height:75%; width:20%;
 		float:left;
 	}
-	
 	#content {
-		overflow-y:scroll;
+		overflow-y:scroll; float:left;
+		height:75%; width:80%;
 		padding:10px;
-		height:75%;
-		float:left;
-		width:80%;
 	}
+        
+        
 <!-- will use this stuff when creating a review -->
 <!--
 	}
@@ -120,7 +94,7 @@
             </div>
 	</div>
 	<div class="col" style="float:right">
-		<img src="images/beach.jpg" alt="..." class="img-thumbnail">
+		<img src="images/beach.jpg" alt="...">
 	</div>
 	<div class="col pull-right pull-down" style="width: 20%; margin:20px;">
 		<button type="button" class="btn btn-success" style="float:right">Bookmark</button>
@@ -222,77 +196,15 @@
 			
         </div>
         <div id="pane3" class="tab-pane">
-            <div class="col-md-10" style="height: 75%; width:100%">
-				<div class="row">
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="images/beach.jpg" alt="..." class="img-thumbnail">
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="images/beach.jpg" alt="..." class="img-thumbnail">
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="images/beach.jpg" alt="..." class="img-thumbnail">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="images/beach.jpg" alt="..." class="img-thumbnail">
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="images/beach.jpg" alt="..." class="img-thumbnail">
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="images/beach.jpg" alt="..." class="img-thumbnail">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="images/beach.jpg" alt="..." class="img-thumbnail">
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="images/beach.jpg" alt="..." class="img-thumbnail">
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="images/beach.jpg" alt="..." class="img-thumbnail">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
         </div>
         <div id="pane4" class="tab-pane">
             <div class="btn-group">
@@ -315,7 +227,7 @@
 			<b><u>Friends Going</b></u>
 			<br>
 			
-			<div class="col-md-10" style="overflow-y:scroll; height: 75%; width:50%">
+			<div class="col-md-10" style="overflow-y:scroll; height: 75%; width:70%">
 				<div class="row">
 					<div class="col">
 						<div class="col-sm-6 col-md-4">
