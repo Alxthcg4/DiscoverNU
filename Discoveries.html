@@ -20,11 +20,22 @@
 		color:#FFFFFF;
 	}
 	
-	.discovName {
-		float: left;
+	#discovName {
+	float: left;
         padding:50px;
         width: 75%;
 	}
+        
+        #discovDetails {
+            margin-top:10px;
+            font-size:18;
+	}
+        
+        .tag {
+            margin:10px;
+            font-size:20;
+            background-color:#0099FF;
+        }
 	
 <!--will use .rating for creating reviews-->	
 	.rating {
@@ -99,9 +110,13 @@
 	
 </style>
 
-<h1>
-	<div class="discovName" style="width:50%; float:left; ">
-		Beach Party
+<h1 style="font-family:">
+	<div id="discovName" style="width:50%; float:left; ">
+            Beach Party
+            <div id="discovDetails">
+                Sat. March 8, 2014 &nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp 8:00 pm<br>
+                2311 Campus Drive, Evanston, IL 60201
+            </div>
 	</div>
 	<div class="col" style="float:right">
 		<img src="images/beach.jpg" alt="..." class="img-thumbnail">
@@ -125,26 +140,24 @@
 <div class="col-md-10" id="content">
     <div class="tab-content">
         <div id="pane1" class="tab-pane active">
-            <h4 style="width:100%; height: 15%">
-				8:00 pm<br>
-				Sat. March 8, 2014<br>
-				2311 Campus Drive, Evanston, IL 60201
-			</h4>
-            <div style="float: left; width: 30%; height: 85%">
-				<b>Filters</b><br>
-				<br>
-					<span>
-						<a>Free</a><br>
-						<a>Evanston Campus</a><br>
-						<a>Food</a><br>
-						<a>Outdoors</a>
-					</span>
-			</div>
-			<div style="float:left; width: 70%; height: 85%">
-				Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!<br><br>
-				Food will be provided by Lou Malnati's!<br><br>
-				Sponsored by ASG
-			</div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Tags</a></li>
+            </ul>
+            <div id="tags">
+            <span class="badge tag">Outdoors</span><span class="badge tag">Sports</span><span class="badge tag">Food</span><span class="badge tag">Group</span>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">About</a></li>
+            </ul>
+			<div class="panel panel-default pull-left" style="margin:10px; width:90%">
+                            <div class="panel-body">
+                                A beach is a landform along the shoreline of an ocean, sea, lake, or river. It usually consists of loose particles, which are often composed of rock, such as sand, gravel, shingle, pebbles, or cobblestones. The particles comprising the beach are occasionally biological in origin, such as mollusc shells or coralline algae.
+
+                                <br><br>Wild beaches are beaches that do not have lifeguards or trappings of modernity nearby, such as resorts, camps, and hotels. They are sometimes called undeclared, undeveloped, or undiscovered beaches. Wild beaches can be valued for their untouched beauty and preserved nature. They are most commonly found in less developed areas including, for example, parts of Puerto Rico, the Dominican Republic, Thailand, the Philippines and Indonesia, but they are also found in developed nations such as Australia and New Zealand.
+
+                                <br><br>Beaches typically occur in areas along the coast where wave or current action deposits and reworks sediments.
+                            </div>
+                            </div>
         </div>
         <div id="pane2" class="tab-pane">
             <h4>
