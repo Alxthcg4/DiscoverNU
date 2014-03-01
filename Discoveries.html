@@ -1,15 +1,18 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 <style>
+        
 	html,body
 	{
 		width: 100%;
 		height: 100%;
 		margin: 0px;
 		padding: 0px;
-		overflow-x: hidden; 
+		overflow-x: hidden;
+                font-family: 'Roboto', sans-serif;
 	}
 
 	h1 {
@@ -22,8 +25,9 @@
 	
 	#discovName {
 	float: left;
-        padding:50px;
+        padding:40px;
         width: 75%;
+        font-size:50;
 	}
         
         #discovDetails {
@@ -72,7 +76,7 @@
 		background:#E0E0E0;
 		padding:10px;
 		height:75%;
-		width:150px;
+		width:20%;
 		float:left;
 	}
 	
@@ -81,10 +85,7 @@
 		padding:10px;
 		height:75%;
 		float:left;
-		
-		width: -moz-calc(100% - 150px);
-		width: -webkit-calc(100% - 150px);
-		width: calc(100% - 150px);
+		width:80%;
 	}
 <!-- will use this stuff when creating a review -->
 <!--
@@ -110,7 +111,7 @@
 	
 </style>
 
-<h1 style="font-family:">
+<h1>
 	<div id="discovName" style="width:50%; float:left; ">
             Beach Party
             <div id="discovDetails">
@@ -121,7 +122,7 @@
 	<div class="col" style="float:right">
 		<img src="images/beach.jpg" alt="..." class="img-thumbnail">
 	</div>
-	<div class="col" style="width: 20%; float: left">
+	<div class="col pull-right pull-down" style="width: 20%; margin:20px;">
 		<button type="button" class="btn btn-success" style="float:right">Bookmark</button>
 	</div>
 </h1>
@@ -134,7 +135,7 @@
             <li><a href="#pane3" data-toggle="tab">Photos</a></li>
             <li><a href="#pane4" data-toggle="tab">Social</a></li>
     </ul>
-		<img src="http://www.3g.co.uk/g_phones/large/google-maps-returns-to-apple-devices-1.jpg" alt="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2943.0464929973045!2d-83.23828474999999!3d42.46929985!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824c9cd3586cce9%3A0x1b6e872299280354!2sNorthwestern+Technological+Institute!5e0!3m2!1sen!2sus!4v1393633160072" width="250" height="250" frameborder="0" style="margin:0px; border:0"></iframe>
   </div><!-- /.tabbable -->
   </div>
 <div class="col-md-10" id="content">
