@@ -8,13 +8,19 @@ html,body {
 	background:#4E015C;
 }
 	
-.panel panel-default {
-	background:#FFFFFF;
+.panel {
+	background:#BBBBBB;
+	color:#FFFFFF;
 	float:left;
-	width:350px;
-	height:250px;
-	margin:5px;
+	width:13vW;
+	height:50px;
+	margin:0.1vW;
 	padding:0px;
+}
+
+.filter-added {
+	background-color:#FFFFFF;
+	color:#000000;
 }
 
 .navbar .nav > li > a {
