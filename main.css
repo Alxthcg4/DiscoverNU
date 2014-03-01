@@ -35,10 +35,11 @@ html,body {
 
 #filters {
 	overflow-y:scroll;
-	width:17%;
+	width:15vW;
 	height: 90%;
 	background:#E0E0E0;
-	padding-top:10px;
+	padding:0.2vW;
+	float:left;
 	
 	height: -moz-calc(100% - 90px);
 	height: -webkit-calc(100% - 90px);
@@ -47,8 +48,9 @@ html,body {
 
 #discoveries {
 	overflow-y:scroll;
-	width:83%;
-	padding:2px;
+	width:84vW;
+	padding:0px;
+	float:left;
 	
 	height: -moz-calc(100% - 90px);
 	height: -webkit-calc(100% - 90px);
@@ -73,21 +75,39 @@ html,body {
 }
 
 .discovery {
-		width:24%;
-		height:310px;
-		float:left;
-		margin: 4px;
+	width:20.4vw;
+	height:12vw;
+	float:left;
+	
+	margin:0.1vw;
+
+	background-size: 100%;
+	
+	overflow-x:hidden;
+	overflow-y:hidden;
 }
-.discovery_image {
-		padding:3px;
+
+.description {
+	background-color:rgba(0,0,0,0.5);
+	position:relative;
+	color:#FFFFFF;
+	
+	top: -moz-calc(100% - 34px);
+	top: -webkit-calc(100% - 34px);
+	top: calc(100% - 34px);
+
+	padding:0.5vw;
+	width:20.5vw;
+	height:12vw;
+	
+	transition-property:top;
+	-moz-transition-property: top; /* Firefox 4 */
+	-webkit-transition-property:top; /* Safari and Chrome */
+	-o-transition-property:top; /* Opera */
+	
+	transition-duration: 500ms;
 }
-.discovery_body {
-		padding:10px;
-		padding-top:0px;
-		font-size:14;
-		overflow-y:hidden;
-}
-.discovery_date {
-	position:relative; top:; right:5px;
-	background-color:#0099FF;
+
+.discovery:hover .description {
+	top:0px;
 }

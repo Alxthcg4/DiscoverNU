@@ -99,10 +99,10 @@ function updateDiscoveries(relatedTags) {
             endIndex = 0;
             for (var d = discoveries.length-1;d>=endIndex;d--) {
                 if (findEqualName(relatedTags[t].name,discoveries[d].tags)) {
-                    sortedDiscoveries = ["<div class=\"panel panel-default discovery\" href=\"Discoveries.html\" data-toggle=\"modal\"><div class=\"panel-heading discovery_image\"><img src=\"images/"+discoveries[d].img+"\" alt=\"...\"><span class=\"badge pull-right discovery_date\">3/8</span></div><div class=\"panel-body discovery_body\"><h4>"+discoveries[d].name+"<p class=\"ratingstars\"><span class=\"glyphicon glyphicon-star-empty\"></span><span class=\glyphicon glyphicon-star-empty\"></span><span class=\"glyphicon glyphicon-star\"></span><span class=\"glyphicon glyphicon-star\"></span><span class=\"glyphicon glyphicon-star\"></span></p>	</h4><p>"+discoveries[d].description+"</p></div></div>"+sortedDiscoveries];
+                    sortedDiscoveries = [makeDiscoveryHTML(d)+sortedDiscoveries];
                     moveToFront(discoveries,d); d++; endIndex++;
                 } else {
-                    bottomDiscoveries = ["<div class=\"panel panel-default discovery\" href=\"Discoveries.html\" data-toggle=\"modal\"><div class=\"panel-heading discovery_image\"><img src=\"images/"+discoveries[d].img+"\" alt=\"...\"><span class=\"badge pull-right discovery_date\">3/8</span></div><div class=\"panel-body discovery_body\"><h4>"+discoveries[d].name+"<p class=\"ratingstars\"><span class=\"glyphicon glyphicon-star-empty\"></span><span class=\glyphicon glyphicon-star-empty\"></span><span class=\"glyphicon glyphicon-star\"></span><span class=\"glyphicon glyphicon-star\"></span><span class=\"glyphicon glyphicon-star\"></span></p>	</h4><p>"+discoveries[d].description+"</p></div></div>"+bottomDiscoveries];
+                    bottomDiscoveries = [makeDiscoveryHTML(d)+bottomDiscoveries];
                 }
                 $("#discoveries").html(sortedDiscoveries+bottomDiscoveries);
             }
@@ -111,7 +111,7 @@ function updateDiscoveries(relatedTags) {
         sortedDiscoveries = ""; bottomDiscoveries = "";
         endIndex = 0;
         for (var d = discoveries.length-1;d>=endIndex;d--) {
-            bottomDiscoveries = ["<div class=\"panel panel-default discovery\" href=\"Discoveries.html\" data-toggle=\"modal\"><div class=\"panel-heading discovery_image\"><img src=\"images/"+discoveries[d].img+"\" alt=\"...\" style=\"width:100%\"><span class=\"badge pull-right discovery_date\">3/8</span></div><div class=\"panel-body discovery_body\"><h4>"+discoveries[d].name+"<p class=\"ratingstars\"><span class=\"glyphicon glyphicon-star-empty\"></span><span class=\glyphicon glyphicon-star-empty\"></span><span class=\"glyphicon glyphicon-star\"></span><span class=\"glyphicon glyphicon-star\"></span><span class=\"glyphicon glyphicon-star\"></span></p>	</h4><p>"+discoveries[d].description+"</p></div></div>"+bottomDiscoveries];
+            bottomDiscoveries = [makeDiscoveryHTML(d)+bottomDiscoveries];
             $("#discoveries").html(sortedDiscoveries+bottomDiscoveries);
         }
     }
@@ -157,4 +157,18 @@ function findIndex(name,target_array) {
         }
     }
     return index;
+}
+
+function makeDiscoveryHTML(d) {
+	discovery = "<div class=\"discovery\" href=\"Discoveries.html\" data-toggle=\"modal\" style=\"background-image:url(\'images/"+discoveries[d].img+"\')\"><div class=\"description\">";
+	discovery = [discovery+discoveries[d].name];
+	discovery = [discovery+"<p class=\"ratingstars\">"];
+	for(var i =0;i<2;i++)
+		discovery = [discovery+"<span class=\"glyphicon glyphicon-star-empty\"></span>"];
+	for(var i =0;i<3;i++)
+		discovery = [discovery+"<span class=\"glyphicon glyphicon-star\"></span>"];
+	discovery = [discovery+"</p>"+"<br><br>"+discoveries[d].description];
+	discovery = [discovery+"</div></div>"];
+
+	return discovery;
 }
