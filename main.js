@@ -31,6 +31,7 @@ $(document).ready(function() {
         new filter ("Fancy",["Food","Indoors","Late Night"])
     ];
     addedFilters = [];
+	searchedFilters = [];
 
     discoveries = [
         new discovery("Beach Party","beach.jpg",["Outdoors","Group","Cheap"],"Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!"),
@@ -47,6 +48,14 @@ $(document).ready(function() {
 
     updateFilters(new Array());
     updateDiscoveries(new Array());
+	
+	$("#filter-search").keyup(function() {
+		search_filter_function();
+		updateFilters(new Array());
+	});
+	$('.navbar-form').on('submit', function(event){
+		event.preventDefault();
+	});
 });
 
 function updateFilters(relatedFilters) {
@@ -54,22 +63,34 @@ function updateFilters(relatedFilters) {
     for (var i = 0;i<addedFilters.length;i++) {
         topFilters = ["<div class=\"panel filter-added\"><div class=\"panel-heading\">"+addedFilters[i].name+"<button type=\"button\" id=\""+addedFilters[i].name+"\" class=\"btn btn-primary btn-xs pull-right filter_minus\">-</button></div></div>"+topFilters];
     }
-    sortedFilters = ""; bottomFilters = "";
-    endIndex = 0;
-    for (var j = availableFilters.length-1;j>=endIndex;j--) {
-        if (findEqualName(availableFilters[j].name,relatedFilters)) {
-            sortedFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+availableFilters[j].name+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+sortedFilters];
-            moveToFront(availableFilters,j); j++; endIndex++;
-        } else {
-            bottomFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+availableFilters[j].name+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+bottomFilters];
-        }
-        $("#filters").html(topFilters+sortedFilters+bottomFilters);
-    }
+	if ($("#filter-search").val().length == 0) {
+		sortedFilters = ""; bottomFilters = "";
+		endIndex = 0;
+		for (var j = availableFilters.length-1;j>=endIndex;j--) {
+			if (findEqualName(availableFilters[j].name,relatedFilters)) {
+				sortedFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+availableFilters[j].name+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+sortedFilters];
+				moveToFront(availableFilters,j); j++; endIndex++;
+			} else {
+				bottomFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+availableFilters[j].name+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+bottomFilters];
+			}
+			$("#filters").html(topFilters+sortedFilters+bottomFilters);
+		}
+	} else {
+		foundFilters = "";
+		for (var j = 0;j < searchedFilters.length;j++) {
+			foundFilters = [foundFilters+"<div class=\"panel panel-default\"><div class=\"panel-body\">"+searchedFilters[j].name+"<button type=\"button\" id=\""+searchedFilters[j].name+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"];
+			$("#filters").html(foundFilters);
+		}
+	}
+	
     $(".filter_plus").click(function() {
+		searchedFilters = [];
+		$("#filter-search").val("");
         plus_filter_function($(this).attr('id'))
-        
     });
     $(".filter_minus").click(function() {
+		searchedFilters = [];
+		$("#filter-search").val("");
         minus_filter_function($(this).attr('id'))
     });
 }
@@ -89,6 +110,18 @@ function minus_filter_function(name) {
     addedFilters.splice(index,1);
     updateFilters(new Array());
     updateDiscoveries(addedFilters);
+}
+
+function search_filter_function() {
+	var searchString = $("#filter-search").val().toLowerCase();
+	searchedFilters = [];
+	if (searchString.length > 0) {
+		for (var j = 0;j < availableFilters.length;j++) {
+			if (availableFilters[j].name.toLowerCase().indexOf(searchString) != -1) {
+				searchedFilters.push(availableFilters[j]);
+			}
+		}
+	}
 }
 
 function updateDiscoveries(relatedTags) {
