@@ -87,7 +87,7 @@ $(document).ready(function() {
 function updateFilters(relatedFilters) {
     topFilters = ""; $("#filters").html("");
     for (var i = 0;i<addedFilters.length;i++) {
-        topFilters = ["<div class=\"panel filter-added\"><div class=\"panel-heading\">"+addedFilters[i].name+"<button type=\"button\" id=\""+addedFilters[i].name+"\" class=\"btn btn-primary btn-xs pull-right\">-</button></div></div>"+topFilters];
+        topFilters = ["<div class=\"panel filter-added\" id=\""+addedFilters[i].name+"\"><div class=\"panel-heading\">"+addedFilters[i].name+"<button type=\"button\" class=\"btn btn-primary btn-xs pull-right\">-</button></div></div>"+topFilters];
     }
 	if ($("#filter-search").val().length == 0) {
 		sortedFilters = ""; bottomFilters = "";
