@@ -1,105 +1,108 @@
-<style>
-	html,body {
-		height:100%;
-		width:100%;
-		padding:0;
-		margin:0;
-	}
+h1 {
+	background:#4E015C;
+	height:25%;
+	overflow:hidden;
+	margin:0px;
+	color:#FFFFFF;
+}
+
+#accountName {
+	float: left;
+    padding:3%;
+    width: 75%;
+    font-size:40;
+}
+
+#accountDescription {
+    margin-top:10px;
+    font-size:18;
+}
+
+#friendDescription{
+	width: 85%;
+	font-size: 18px;
+}
+
+h7 {
+	font-size: 40px;
+	font-weight: bold;
+
+}
+
+#side_panel {
+	overflow-y:hidden;
+	overflow-x:hidden;
+	background:#E0E0E0;
+	padding:10px;
+	height:75%;
+	width:150px;
+	float:left;
+}
+
+#content {
+	padding:10px;
+	height:75%;
+	float:left;
 	
-	h1 {
-		background:#4E015C;
-		height:25%;
-		overflow:hidden;
-		margin:0px;
-		color:#FFFFFF;
-	}
+	width: -moz-calc(100% - 160px);
+	width: -webkit-calc(100% - 160px);
+	width: calc(100% - 160px);
+}
 
-	.account-name {
-		float: left;
-		padding: 50px;
-        vertical-align: middle;
-        width: 75%;
-	}
 
-	.friend-description{
-		width: 85%;
-		font-size: 18px;
-	}
+.ratingstars {
+	float: right;
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	text-align: center;
+	color: gold;
+}
 
-	h7 {
-		font-size: 40px;
-		font-weight: bold;
-
-	}
+.discovery {
+	width:20.4vw;
+	height:12vw;
+	float:left;
 	
-	#side_panel {
-		overflow-y:hidden;
-		overflow-x:hidden;
-		background:#E0E0E0;
-		padding:10px;
-		height:75%;
-		width:150px;
-		float:left;
-	}
+	margin:0.1vw;
+
+	background-size: 100%;
 	
-	#content {
-		padding:10px;
-		height:75%;
-		float:left;
-		
-		width: -moz-calc(100% - 160px);
-		width: -webkit-calc(100% - 160px);
-		width: calc(100% - 160px);
-	}
+	overflow-x:hidden;
+	overflow-y:hidden;
+	
+	cursor: pointer;
+	cursor: hand;
+}
 
+.description {
+	background-color:rgba(0,0,0,0.5);
+	position:relative;
+	color:#FFFFFF;
+	
+	top: -moz-calc(100% - 34px);
+	top: -webkit-calc(100% - 34px);
+	top: calc(100% - 34px);
 
-	.ratingstars {
-		float: right;
-		unicode-bidi: bidi-override;
-		direction: rtl;
-		text-align: center;
-		color: gold;
-	}
+	padding:0.5vw;
+	width:20.5vw;
+	height:12vw;
+	
+	transition-property:top;
+	-moz-transition-property: top; /* Firefox 4 */
+	-webkit-transition-property:top; /* Safari and Chrome */
+	-o-transition-property:top; /* Opera */
+	
+	transition-duration: 500ms;
+}
 
-	.discovery {
-		width:20.4vw;
-		height:12vw;
-		float:left;
-		
-		margin:0.1vw;
+.discovery:hover .description {
+	top:0px;
+}
 
-		background-size: 100%;
-		
-		overflow-x:hidden;
-		overflow-y:hidden;
-		
-		cursor: pointer;
-		cursor: hand;
-	}
-
-	.description {
-		background-color:rgba(0,0,0,0.5);
-		position:relative;
-		color:#FFFFFF;
-		
-		top: -moz-calc(100% - 34px);
-		top: -webkit-calc(100% - 34px);
-		top: calc(100% - 34px);
-
-		padding:0.5vw;
-		width:20.5vw;
-		height:12vw;
-		
-		transition-property:top;
-		-moz-transition-property: top; /* Firefox 4 */
-		-webkit-transition-property:top; /* Safari and Chrome */
-		-o-transition-property:top; /* Opera */
-		
-		transition-duration: 500ms;
-	}
-
-	.discovery:hover .description {
-		top:0px;
-	}
-
-</style>
+.profile_thumb {
+        width:70%; height:auto;
+        margin:1%;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+}
