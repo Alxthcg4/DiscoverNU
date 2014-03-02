@@ -104,7 +104,7 @@ function updateFilters(relatedFilters) {
 	} else {
 		foundFilters = "";
 		for (var j = 0;j < searchedFilters.length;j++) {
-			foundFilters = [foundFilters+"<div class=\"panel filter-not-added\"><div class=\"panel-body\" id=\""+searchedFilters[j].name+"\">"+searchedFilters[j].name+"<button type=\"button\" class=\"btn btn-primary btn-xs pull-right\">+</button></div></div>"];
+			foundFilters = [foundFilters+"<div class=\"panel filter-not-added\" id=\""+searchedFilters[j].name+"\"><div class=\"panel-body\">"+searchedFilters[j].name+"<button type=\"button\" class=\"btn btn-primary btn-xs pull-right\">+</button></div></div>"];
 			$("#filters").html(foundFilters);
 		}
 	}
