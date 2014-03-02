@@ -6,6 +6,7 @@ html,body {
 
 #main_bar {
 	background:#4E015C;
+	margin:0px;
 }
 	
 .panel {
@@ -47,9 +48,9 @@ html,body {
 	padding:0.2vW;
 	float:left;
 	
-	height: -moz-calc(100% - 90px);
-	height: -webkit-calc(100% - 90px);
-	height: calc(100% - 90px);
+	height: -moz-calc(100% - 60px);
+	height: -webkit-calc(100% - 60px);
+	height: calc(100% - 60px);
 }
 
 #discoveries {
@@ -58,9 +59,9 @@ html,body {
 	padding:0px;
 	float:left;
 	
-	height: -moz-calc(100% - 90px);
-	height: -webkit-calc(100% - 90px);
-	height: calc(100% - 90px);
+	height: -moz-calc(100% - 60px);
+	height: -webkit-calc(100% - 60px);
+	height: calc(100% - 60px);
 }
 
 .modalFrame {
