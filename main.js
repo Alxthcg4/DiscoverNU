@@ -19,30 +19,56 @@ function discovery(name,img,tags,description) {
 $(document).ready(function() {
     
     availableFilters = [
-        new filter("Outdoors",["Sports","Cheap"]),
-        new filter ("Cheap",["Outdoors","Sale","Indoors","Food"]),
-        new filter ("Sports",["Group","Outdoors"]),
-        new filter ("Group",["Sale","Outdoors","Late Night","Food"]),
-        new filter ("Sale",["Cheap","Group"]),
-        new filter ("Indoors",["Cheap","Late Night","Music"]),
-        new filter ("Late Night",["Indoors","Group","Music","Fancy"]),
+        new filter("Evanston",["Student Group","Theatre","Food","Arts"]),
+        new filter("Museum",["Indoors", "Chicago", "Fancy","Modern","Classical"]),
+        new filter("Cultural",["Student Group","Evanston","Arts","Theatre","Dance","Music"]),
+        new filter("Student Group",["Cheap", "Evanston","Comedy","Dance","Acapella"]),
+        new filter("Acapella",["Student Group", "Evanston", "Cheap","Music"]),
+        new filter("Theatre",["Indoors","Modern","Classical","Chicago","Evanston"]),
+        new filter("Arts",["Fancy","Dance","Theatre","Museum"]),
+        new filter("Morning",["Outdoors","Casual","Group"]),
+        new filter("Afternoon",["Outdoors", "Sports","Group"]),
+        new filter("Comedy",["Student Group","Theatre","Cheap","Evanston"]),
+        new filter("Educational",["Museum", "Cultural", "Arts", "Chicago", "Fancy"]),
+        new filter("Charity",["Cultural","Fancy","Casual","Chicago","Evanston"]),
+        new filter("Casual",["Cheap","Student Group","Sports"]),
+        new filter("Dance",["Modern", "Group", "Late Night"]),
+        new filter("Modern",["Dance","Theatre","Music"]),
+        new filter("Classical",["Music","Arts","Museum","Indoors","Late Night"]),
+        new filter("Outdoors",["Sports","Cheap", "Afternoon", "Morning"]),
+        new filter ("Cheap",["Outdoors","Free","Indoors","Food","Student Group"]),
+        new filter ("Sports",["Group","Outdoors", "Afternoon", "Morning"]),
+        new filter ("Group",["Free","Outdoors","Late Night","Food"]),
+        new filter ("Free",["Cheap","Group","Student Group"]),
+        new filter ("Indoors",["Cheap","Late Night","Music","Theatre","Arts"]),
+        new filter ("Late Night",["Indoors","Group","Music","Fancy","21+"]),
         new filter ("Music",["Indoors","Late Night"]),
         new filter ("Food",["Cheap","Group","Fancy"]),
-        new filter ("Fancy",["Food","Indoors","Late Night"])
+        new filter ("Fancy",["Food","Indoors","Late Night"]),
+        new filter ("Chicago",["Museum", "Fancy", "Arts", "Cultural", "Educational"]),
+        new filter("21+",["Late Night", "Group", "Indoors"])
     ];
     addedFilters = [];
 	searchedFilters = [];
 
     discoveries = [
-        new discovery("Beach Party","beach.jpg",["Outdoors","Group","Cheap"],"Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!"),
-        new discovery("NU Hiking Trip","hiking.jpg",["Outdoors","Group","Sports"],"Join fellow Northwestern hiking enthusiasts for a refreshing hike into the mountains!"),
-        new discovery("Wine Tasting","wine.jpg",["Indoors","Group","Late Night"],"Come and experience a romantic and glamourous night of wine tasting! Learn how to be a wine pro!"),
-        new discovery("Concert","concert.jpg",["Indoors","Music","Late Night"],"Watch and listen to that band that's really popular right now in this amazing live concert here at NU!"),
-        new discovery("Dinner for 12","dinner.jpg",["Indoors","Group","Food","Fancy"],"Join 11 other NU faculty and students for an enriching discussion and delicious, fancy meal!"),
-        new discovery("Symphony","symphony.jpg",["Indoors","Fancy","Late Night","Music"],"The Chicago Symphony Orchestra will be visiting Bienen School of Music for a live concert! Don't miss it!"),
-        new discovery("Clothing Sale","shopping.jpg",["Sale","Indoors","Cheap"],"Come to the biggest sale event at the Chicago Water Tower! All stores will be giving discounted prices!"),
-        new discovery("Barbeque","barbeque.jpg",["Outdoors","Food","Group"],"Slivka is hosting an outdoors barbeque together with CCI to promote interdorm relations! Join us!"),
-        new discovery("Intramural Basketball","basketball.jpg",["Indoors","Sports","Group"],"Join your neighbours at Plex for a friendly and fun game of intramural basketball! All are welcome!")
+        new discovery("Beach Party","images/beach.jpg",["Outdoors","Group","Cheap","Late Night"],"Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!"),
+        new discovery("NU Hiking Trip","images/hiking.jpg",["Outdoors","Group","Sports","Afternoon"],"Join fellow Northwestern hiking enthusiasts for a refreshing hike into the mountains!"),
+        new discovery("Wine Tasting","images/wine.jpg",["Indoors","Group","Late Night","21+"],"Come and experience a romantic and glamourous night of wine tasting! Learn how to be a wine pro!"),
+        new discovery("Concert","images/concert.jpg",["Indoors","Music","Late Night","Classical"],"Watch and listen to that band that's really popular right now in this amazing live concert here at NU!"),
+        new discovery("Dinner for 12","images/dinner.jpg",["Indoors","Group","Food","Fancy"],"Join 11 other NU faculty and students for an enriching discussion and delicious, fancy meal!"),
+        new discovery("Symphony","images/symphony.jpg",["Indoors","Fancy","Late Night","Music","Classical","Arts"],"The Chicago Symphony Orchestra will be visiting Bienen School of Music for a live concert! Don't miss it!"),
+        new discovery("Clothing Sale","images/shopping.jpg",["Evanston","Indoors","Cheap"],"Come to the biggest sale event at the Chicago Water Tower! All stores will be giving discounted prices!"),
+        new discovery("Barbeque","images/barbeque.jpg",["Outdoors","Food","Group", "Charity"],"NU’s service fraternity is hosting a barbeque to raise money for the American Cancer Society."),
+        new discovery("Intramural Basketball","images/basketball.jpg",["Indoors","Sports","Group","Morning"],"Join your neighbours at Plex for a friendly and fun game of intramural basketball! All are welcome!"),
+        new discovery("Waiting for Superman Film Screening","http://philanthropy.com/img/photos/biz/photo_6152_landscape_large.jpg",["Indoors","Educational","Student Group"],"NU’s Students for Educational Reform group is hosting a film screening of Waiting for Superman which highlights educational inequalities. Come join!"),
+        new discovery("Navy Pier","http://www.huenelectric.com/images/navy-pier.jpg", ["Chicago", "Outdoors","Cheap", "Morning", "Afternoon"],"Navy Pier on the Chicago shoreline of Lake Michigan has tons of activities!"),
+        new discovery("Art Institute", "http://cmsimg.freep.com/apps/pbcsi.dll/bilde?Site=C4&Date=20130202&Category=COL21&ArtNo=302020018&Ref=V2&MaxW=300&Border=0&Can-you-afford-to-go-to-Chicago-How-to-beat-high-prices-in-low-season", ["Museum","Chicago","Free", "Arts", "Fancy", "Educational"],"NU Students get free admission to Chicago’s premiere Art Museum!"),
+        new discovery("Romeo and Juliet","http://mamasmission.com/wp-content/uploads/2014/02/romeo-and-juliet-dvd-bluray-RJ_00269_rgb-300x200.jpg",["Theatre","Arts","Student Group","Evanston"],"Northwestern’s very own Shakespeare Club is presenting a rendition of Romeo and Juliet for all students to see! Come see the classic play!"),
+        new discovery("Battle of the Bamboo","http://frontpagephilippinestv.files.wordpress.com/2009/10/muslim_singkil.jpg?w=300",["Chicago","Arts","Student Group","Dance","Cheap"],"The greatest cultural dance competition returns this year to Loyola! Come see the greatest performances of traditional Filipino dances in all of the country!"),
+        new discovery("Acapella Show","http://www.statepress.com/wp-content/uploads/2013/04/4.7_Awards-300x200.jpg",["Acapella","Arts","Student Group","Evanston","Cheap"],"Join us for an amazing show showcasing all of Northwestern’s greatest singing talent! Be amazed by the talent of these singers!"),
+        new discovery("Second City Comes to NU","http://chicagotonight.wttw.com/sites/default/files/styles/article-medium/public/_DSC7920.jpg",["Comedy","Theatre","Evanston","Cheap"],"The greatest comedy group in all of Chicago is coming to Northwestern for one amazing show! Don’t miss it!"),
+        new discovery("NU Seniors Bar Crawl","http://img.ehowcdn.com/article-new-thumbnail/ehow/images/a07/pb/g6/bachelorette-bar-crawl-shirt-ideas-800x800.jpg",["21+","Evanston","Group","Late Night"],"Join all the seniors for one last celebration of Northwestern education in a fun-filled, crazy night at all of Evanston’s bars!")
     ];
     orig_discoveries = discoveries;
 
@@ -193,7 +219,7 @@ function findIndex(name,target_array) {
 }
 
 function makeDiscoveryHTML(d) {
-	discovery = "<div class=\"discovery\" href=\"Discoveries.html\" data-toggle=\"modal\" style=\"background-image:url(\'images/"+discoveries[d].img+"\')\"><div class=\"description\">";
+	discovery = "<div class=\"discovery\" href=\"Discoveries.html\" data-toggle=\"modal\" style=\"background-image:url(\'"+discoveries[d].img+"\')\"><div class=\"description\">";
 	discovery = [discovery+discoveries[d].name];
 	discovery = [discovery+"<p class=\"ratingstars\">"];
 	for(var i =0;i<2;i++)
