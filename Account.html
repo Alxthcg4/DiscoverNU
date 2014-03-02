@@ -3,60 +3,7 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="popup.js"></script>
 
-<style>
-	html,body {
-		height:100%;
-		width:100%;
-		padding:0;
-		margin:0;
-	}
-	
-	h1 {
-		background:#4E015C;
-		height:25%;
-		overflow:hidden;
-		margin:0px;
-		color:#FFFFFF;
-	}
-
-	.account-name {
-		float: left;
-		padding: 50px;
-        vertical-align: middle;
-        width: 75%;
-	}
-
-	.friend-description{
-		width: 85%;
-		font-size: 18px;
-	}
-
-	h7 {
-		font-size: 40px;
-		font-weight: bold;
-
-	}
-	
-	#side_panel {
-		overflow-y:hidden;
-		overflow-x:hidden;
-		background:#E0E0E0;
-		padding:10px;
-		height:75%;
-		width:150px;
-		float:left;
-	}
-	
-	#content {
-		padding:10px;
-		height:75%;
-		float:left;
-		
-		width: -moz-calc(100% - 160px);
-		width: -webkit-calc(100% - 160px);
-		width: calc(100% - 160px);
-	}
-</style>
+<link rel="stylesheet" type="text/css" href="Account.css">
 
 <h1>
 	<div class="account-name">
@@ -100,150 +47,146 @@
         	</h4>
 
 		    <div class="row" style="overflow-y:scroll; height: 85%; padding: 5px">
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>
-			                        Beach Party
-			                        <div style="float: right">
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star-empty"></span>
-			                        </div>
-		                        </h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/hiking.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>
-		                        	NU Hiking Trip
-		                        	<div style="float: right">
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star-empty"></span>
-			                        </div>
-		                        </h3>
-		                        <p>Join fellow Northwestern hiking enthusiasts for a refreshing hike into the mountains!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/wine.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>
-		                        	Wine Tasting
-		                        	<div style="float: right">
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star-empty"></span>
-			                        </div>
-		                        </h3>
-		                        <p>Come and experience a romantic and glamourous night of wine tasting! Learn how to be a wine pro!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/symphony.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>
-		                        	Symphony
-		                        	<div style="float: right">
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star-empty"></span>
-			                        </div>
-		                        </h3>
-		                        <p>The Chicago Symphony Orchestra will be visiting Bienen School of Music for a live concert! Don't miss it!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/basketball.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>
-		                        	Intramural Basketball
-		                        	<div style="float: right">
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star"></span>
-			                        	<span class="glyphicon glyphicon-star-empty"></span>
-			                        </div>
-		                        </h3>
-		                        <p>Join your neighbours at Plex for a friendly and fun game of intramural basketball! All are welcome!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
+		        <div class="discovery" href="Discoveries.html" style="background-image:url('images/beach.jpg')">
+					<div class="description">
+					Beach Party
+					<p class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+					</p>
+					<br><br>
+					Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!
+					</div>
+				</div>
+				<div class="discovery" href="Discoveries.html" style="background-image:url('images/beach.jpg')">
+					<div class="description">
+					Beach Party
+					<p class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+					</p>
+					<br><br>
+					Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!
+					</div>
+				</div>
+				<div class="discovery" href="Discoveries.html" style="background-image:url('images/beach.jpg')">
+					<div class="description">
+					Beach Party
+					<p class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+					</p>
+					<br><br>
+					Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!
+					</div>
+				</div>
+				<div class="discovery" href="Discoveries.html" style="background-image:url('images/beach.jpg')">
+					<div class="description">
+					Beach Party
+					<p class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+					</p>
+					<br><br>
+					Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!
+					</div>
+				</div>
+				<div class="discovery" href="Discoveries.html" style="background-image:url('images/beach.jpg')">
+					<div class="description">
+					Beach Party
+					<p class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+					</p>
+					<br><br>
+					Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!
+					</div>
+				</div>
+				<div class="discovery" href="Discoveries.html" style="background-image:url('images/beach.jpg')">
+					<div class="description">
+					Beach Party
+					<p class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+					</p>
+					<br><br>
+					Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!
+					</div>
+				</div>
+				<div class="discovery" href="Discoveries.html" style="background-image:url('images/beach.jpg')">
+					<div class="description">
+					Beach Party
+					<p class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+					</p>
+					<br><br>
+					Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!
+					</div>
+				</div>
+				<div class="discovery" href="Discoveries.html" style="background-image:url('images/beach.jpg')">
+					<div class="description">
+					Beach Party
+					<p class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+					</p>
+					<br><br>
+					Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!
+					</div>
+				</div>
+				<div class="discovery" href="Discoveries.html" style="background-image:url('images/beach.jpg')">
+					<div class="description">
+					Beach Party
+					<p class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+					</p>
+					<br><br>
+					Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!
+					</div>
+				</div>
+				<div class="discovery" href="Discoveries.html" style="background-image:url('images/beach.jpg')">
+					<div class="description">
+					Beach Party
+					<p class="ratingstars">
+						<span class="glyphicon glyphicon-star-empty"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+					</p>
+					<br><br>
+					Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!
+					</div>
+				</div>
 		    </div>
         </div>
         <div id="pane2" class="tab-pane">
@@ -265,105 +208,7 @@
         	</h4>
 
 		    <div class="row" style="overflow-y:scroll; height: 85%; padding: 5px">
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="col">
-		            <div class="col-sm-6 col-md-4">
-		                <div class="thumbnail">
-		                    <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-		                    <div class="caption">
-		                        <h3>Beach Party</h3>
-		                        <p>Come to North Beach for an off-the-hook party with amazing food and people that you will want to meet!</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
+		    
 		    </div>
         </div>
         <div id="pane3" class="tab-pane">
@@ -385,19 +230,27 @@
         	</h6>
         	<div class="col" style="overflow-y:scroll; height: 88%; padding: 5px">
         		<div class="well media">
-					<a class="pull-left" href="#" style="width: 20%">
-						<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson" class="img-thumbnail media-object">
+					<a href="Friend Account.html" class="pull-left" style="width: 20%">
+						<img src="images/silhouette.jpg" alt="Bob Johnson" class="img-thumbnail media-object">
 					</a>
 					<div class="media-body">
 						<div style="margin: 5px; float: right">
-				        	<button type="button" class="btn btn-default btn-block">Discoveries</button>   
-				        	<button type="button" class="btn btn-default btn-block">Bookmarks</button>
-				        	<button type="button label" class="btn btn-block label-danger"> REMOVE
+							<a href="Account.html#pane1">
+				        		<type="button" class="btn btn-default btn-block" href="Friend Account.html#pane1" style="margin: 5px">Bookmarked</button>   
+				        	</a>
+				        	<a href="Account.html#pane2">
+				        		<button type="button" class="btn btn-default btn-block" href="Friend Account.html#pane2" style="margin: 5px">Uploads</button>
+				        	</a>
+				        	<a href="Account.html#pane4">
+				        		<button type="button" class="btn btn-default btn-block" href="Friend Account.html#pane4" style="margin: 5px">Friends</button>
+				        	</a>
+				        	<button type="button label" class="btn btn-block label-danger" style="margin: 5px"> REMOVE
 				        		<span class="glyphicon glyphicon-remove"></span>
 				        	</button>
 						</div>
 						<div class="friend-description">
-				            <h7>Bob Johnson</h7>
+				            <h7>
+				            	<a href="Friend Account.html">Bob Johnson (bdad12)</a></h7>
 				            <p> Hello, I am a single father of two ...</p>
 				        </div>
 				        
