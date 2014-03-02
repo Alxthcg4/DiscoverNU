@@ -17,3 +17,6 @@ html,body
 	overflow-x: hidden;
         font-family: 'Roboto', sans-serif;
 }
+.badge {
+    background-color: #428bca;
+}

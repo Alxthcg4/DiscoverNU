@@ -29,11 +29,47 @@
         }
         
         .tag {
-            margin:10px;
-            font-size:20;
-            background-color:#0099FF;
+            margin-top:10px;
+            font-size:16;
         }
-	
+        #bookmark {
+            color:#383838;
+        }
+        #bookmark:hover {
+            background-color:#383838;
+            color:#fff;
+        }
+        #post_button {
+            background-color:#C8C8C8;
+            color:#000;
+            margin-left:10px; float:left;
+        }
+        #post_button:hover {
+            background-color:#383838;
+            color:#fff;
+        }
+        .profile {
+            height:80px; width:80px;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+        }
+        .post {
+            min-height:80px;
+        }
+        .profile_thumb {
+            height:45px; width:45px;
+            margin:1px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        .photo{
+            border-radius: 10px;
+            margin:10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+        }
 <!--will use .rating for creating reviews-->	
 	.rating {
 		unicode-bidi: bidi-override; direction: rtl; text-align: center; color: gold;
@@ -97,7 +133,7 @@
 		<img src="images/beach.jpg" alt="...">
 	</div>
 	<div class="col pull-right pull-down" style="width: 20%; margin:20px;">
-		<button type="button" class="btn btn-success" style="float:right">Bookmark</button>
+		<button id="bookmark" type="button" class="btn" style="float:right;">Bookmark</button>
 	</div>
 </h1>
 
@@ -115,24 +151,21 @@
 <div class="col-md-10" id="content">
     <div class="tab-content">
         <div id="pane1" class="tab-pane active">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#">Tags</a></li>
-            </ul>
-            <div id="tags">
-            <span class="badge tag">Outdoors</span><span class="badge tag">Sports</span><span class="badge tag">Food</span><span class="badge tag">Group</span>
+            
+            <div class="col-md-3 pull-left" style="width:15%; height:100%">
+                <b><u>Tags</b></u><br>
+                <div id="tags">
+                <span class="badge tag">Outdoors</span><br><span class="badge tag">Sports</span><br><span class="badge tag">Food</span><br><span class="badge tag">Group</span><br>
+                </div>
             </div>
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#">About</a></li>
-            </ul>
-			<div class="panel panel-default pull-left" style="margin:10px; width:90%">
-                            <div class="panel-body">
-                                A beach is a landform along the shoreline of an ocean, sea, lake, or river. It usually consists of loose particles, which are often composed of rock, such as sand, gravel, shingle, pebbles, or cobblestones. The particles comprising the beach are occasionally biological in origin, such as mollusc shells or coralline algae.
+            <div class="col" style="width:100%; height:100%">
+                <b><u>About</b></u><br><br>
+                A beach is a landform along the shoreline of an ocean, sea, lake, or river. It usually consists of loose particles, which are often composed of rock, such as sand, gravel, shingle, pebbles, or cobblestones. The particles comprising the beach are occasionally biological in origin, such as mollusc shells or coralline algae.
 
-                                <br><br>Wild beaches are beaches that do not have lifeguards or trappings of modernity nearby, such as resorts, camps, and hotels. They are sometimes called undeclared, undeveloped, or undiscovered beaches. Wild beaches can be valued for their untouched beauty and preserved nature. They are most commonly found in less developed areas including, for example, parts of Puerto Rico, the Dominican Republic, Thailand, the Philippines and Indonesia, but they are also found in developed nations such as Australia and New Zealand.
+                <br><br>Wild beaches are beaches that do not have lifeguards or trappings of modernity nearby, such as resorts, camps, and hotels. They are sometimes called undeclared, undeveloped, or undiscovered beaches. Wild beaches can be valued for their untouched beauty and preserved nature. They are most commonly found in less developed areas including, for example, parts of Puerto Rico, the Dominican Republic, Thailand, the Philippines and Indonesia, but they are also found in developed nations such as Australia and New Zealand.
 
-                                <br><br>Beaches typically occur in areas along the coast where wave or current action deposits and reworks sediments.
-                            </div>
-                            </div>
+                <br><br>Beaches typically occur in areas along the coast where wave or current action deposits and reworks sediments.
+            </div>
         </div>
         <div id="pane2" class="tab-pane">
             <h4>
@@ -196,27 +229,28 @@
 			
         </div>
         <div id="pane3" class="tab-pane">
-            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
-            <img src="images/beach.jpg" alt="..." class="img-thumbnail">
+            <img class="photo" src="http://c3270052.r52.cf0.rackcdn.com/cozumel-tulum-beach-2.jpg" alt="...">
+            <img class="photo" src="http://www.islands.com/files/imagecache/article_image/_images/201205/pigeon_point_beach_and_jetty_1.jpg" alt="...">
+            <img class="photo" src="http://www.pleasantholidays.com/OMStorage/XXIMAGE/ptsmkb_beach-2010.jpg" alt="...">
+            <img class="photo" src="http://www.honduras.com/wp-content/uploads/2012/05/white-sandy-beach2-300x200.jpg" alt="...">
+            <img class="photo" src="http://www.californiasbestbeaches.com/photos2/laguna_creek_beach.jpg" alt="...">
+            <img class="photo" src="http://wikitravel.org/upload/shared//thumb/9/9e/Crete_beach.jpg/300px-Crete_beach.jpg" alt="...">
+            <img class="photo" src="http://2y6nhw4cxtex3egg6yhnmgyz6m.wpengine.netdna-cdn.com/wp-content/uploads/2013/03/300px-Pensacola_Beach_1957_White_Sand.jpg" alt="...">
+            <img class="photo" src="http://www.thecubanhistory.com/wp-content/uploads/2011/11/22-Cuba-Varadero-Beach-to-Mansion-Xanada-300x2001.jpg" alt="...">
+            <img class="photo" src="images/new_photo.jpg" alt="...">
         </div>
         <div id="pane4" class="tab-pane">
-            <div class="btn-group">
+                <div class="col-md-3 pull-left" style="width:18.3%">
+                    <b><u>Actions</b></u>
+                         <div class="btn-group" style="width:100%">
 				<br>
 				<button type="button" class="btn btn-default">Going</button>
 				<button type="button" class="btn btn-default">Not Going</button>
 			</div>
 			<br>
+			
 			<br>
-			<b><u>Actions</b></u>
-			<br>
-			<div class="btn-group">
+			<div class="btn-group-vertical" style="width:100%">
 				<a href="#" class="btn btn-primary btn-large" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>', 'Share on Facebook', 'width=600, height=350'); return false;"><i class="icon-white icon-facebook"></i> Share on Facebook</a>
 				<a href="#" class="btn btn-info btn-large" onclick="window.open('http://twitter.com/share?text=<?php the_title(); ?>&url=<?php the_permalink(); ?>', 'Share on Twitter', 'width=600, height=350'); return false;"><i class="icon-white icon-twitter"></i> Share on Twitter</a>
 				<button type="button" class="btn btn-default">Suggest to a Friend</button>
@@ -227,79 +261,106 @@
 			<b><u>Friends Going</b></u>
 			<br>
 			
-			<div class="col-md-10" style="overflow-y:scroll; height: 75%; width:70%">
-				<div class="row">
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<a href="#" class="thumbnail">
-								<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson">
-							</a>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<a href="#" class="thumbnail">
-								<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson">
-							</a>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<a href="#" class="thumbnail">
-								<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson">
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<a href="#" class="thumbnail">
-								<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson">
-							</a>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<a href="#" class="thumbnail">
-								<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson">
-							</a>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<a href="#" class="thumbnail">
-								<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson">
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<a href="#" class="thumbnail">
-								<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson">
-							</a>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<a href="#" class="thumbnail">
-								<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson">
-							</a>
-						</div>
-					</div>
-					<div class="col">
-						<div class="col-sm-6 col-md-4">
-							<a href="#" class="thumbnail">
-								<img src="http://thislovesong.com/wp-content/uploads/2013/09/male-silhouette1.jpg" alt="Bob Johnson">
-							</a>
-						</div>
-					</div>
-				</div>
+			<div class="col" style="width:100%">
+                            <img class="profile_thumb" src="http://cdn1.akamai.coub.com/user/cw_avatar/2712b5feccb/c3abee775505923103a14/profile_pic_1377040362_1387370186.jpg" alt="Bob Johnson">
+                            <img class="profile_thumb" src="http://files-cdn.formspring.me/profile/20101209/n4d953f1c23d38_large.jpg" alt="Bob Johnson" class="profile">
+                            <img class="profile_thumb" src="http://www.scamk.com/wp-content/uploads/2013/04/Maricel-Pahoways.jpg" alt="Bob Johnson" class="profile">
+                            <img class="profile_thumb" src="https://cdn.empowernetwork.com/user_images/post/2013/03/01/b/56/45e2/540_293_resize_20130301_b5645e2a5d11f96ae1391eaeab1d09a5_jpg.jpg" alt="Bob Johnson">
+                            <img class="profile_thumb" src="https://s3.amazonaws.com/ksr/avatars/1341005/Social-Network---Profile-Pic-01.medium.jpg?1328323409" alt="Bob Johnson">
+                            <img class="profile_thumb" src="http://files-cdn.formspring.me/profile/20110331/n4d94eb57a47d2_large.jpg" alt="Bob Johnson" class="profile">
+                            <img class="profile_thumb" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s160x160/1625498_1381712868758821_187385005_a.jpg" alt="Bob Johnson">
+                            <img class="profile_thumb" src="http://files-cdn.formspring.me/profile/20110331/n4d946556aaa91_large.png" alt="Bob Johnson">
+                            <img class="profile_thumb" src="http://media4.onsugar.com/files/2013/06/13/289/n/1922564/e45b047aaf0f6b34_c92b02ccd46511e2ba6922000a1fb733_7.large/i/Here-we-associate-editor-Marisa-assistant-editor-Britt.jpg" alt="Bob Johnson">
 			</div>
 			<br><br>
-			
+                </div>
+                <div class="col" style="width:100%">
+                    <b><u>News Feed</b></u>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                        <img class="media-object profile" src="images/harmon.jpg" alt="...">
+                        </a>
+                        <div class="media-body">
+                            <div class="post">
+                                <h4 class="media-heading">Drew Harmon Pollock</h4>
+                                <textarea class="form-control" rows="3" placeholder="Make a post." style="width:80%; margin:10px"></textarea>
+                                <button id="post_button" type="button" class="btn">Post</button>
+                            </div>
+                    </div>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                        <img class="media-object profile" src="https://pbs.twimg.com/profile_images/465383738/twitterProfilePhoto.jpg" alt="...">
+                        </a>
+                        <div class="media-body">
+                            <div class="post">
+                                <h4 class="media-heading">Chris Walker</h4>
+                                suggested this event to you.
+                            </div>
+                    </div>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                        <img class="media-object profile" src="http://profile.ak.fbcdn.net/hprofile-ak-prn1/c34.34.432.432/s160x160/936894_513681208692142_900221262_n.jpg" alt="...">
+                        </a>
+                        <div class="media-body">
+                            <div class="post">
+                            <h4 class="media-heading">Heather Mayerson</h4>
+                            Hey everyone, I'm a member of the group that's hosting this event! You should totally come and bring all your friends! We got live music, food, and everything!
+                            </div>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                            <img class="media-object profile" src="http://profile.ak.fbcdn.net/hprofile-ak-prn1/c35.35.438.438/s160x160/559001_10151365101600903_1428836193_n.jpg" alt="...">
+                            </a>
+                            <div class="media-body">
+                                <div class="post">
+                                <h4 class="media-heading">Fran McLeary</h4>
+                                I'll be there! ;)
+                                </div>
+                                <div class="media">
+                                    <a class="pull-left" href="#">
+                                    <img class="media-object profile" src="http://profile.ak.fbcdn.net/hprofile-ak-prn1/c34.34.432.432/s160x160/936894_513681208692142_900221262_n.jpg" alt="...">
+                                    </a>
+                                    <div class="media-body">
+                                        <div class="post">
+                                        <h4 class="media-heading">Heather Mayerson</h4>
+                                        :)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                            <img class="media-object profile" src="https://lh4.googleusercontent.com/-xNSPcSTSgoA/AAAAAAAAAAI/AAAAAAAAAAA/5C3Bo2B4JlU/photo.jpg" alt="...">
+                            </a>
+                            <div class="media-body">
+                                <div class="post">
+                                <h4 class="media-heading">Sharon Kim</h4>
+                                So sad! I can't make it! I'll be in California during that day for an interview! :(
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                    <img class="media-object profile" src="http://shecodesconf.com/wp-content/uploads/2013/07/Jinghua-profile.png?a37ba1" alt="...">
+                    </a>
+                    <div class="media-body">
+                        <div class="post">
+                            <h4 class="media-heading">Suzy Cheng</h4>
+                            is going to this event.
+                        </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                    <img class="media-object profile" src="https://pbs.twimg.com/profile_images/465383738/twitterProfilePhoto.jpg" alt="...">
+                    </a>
+                    <div class="media-body">
+                        <div class="post">
+                            <h4 class="media-heading">Chris Walker</h4>
+                            is going to this event.
+                        </div>
+                </div>
         </div>
 		
     </div><!-- /.tab-content -->
