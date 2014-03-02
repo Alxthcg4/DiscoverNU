@@ -92,6 +92,9 @@ html,body {
 	
 	overflow-x:hidden;
 	overflow-y:hidden;
+	
+	cursor: pointer;
+	cursor: hand;
 }
 
 .description {
