@@ -61,34 +61,34 @@ $(document).ready(function() {
 function updateFilters(relatedFilters) {
     topFilters = ""; $("#filters").html("");
     for (var i = 0;i<addedFilters.length;i++) {
-        topFilters = ["<div class=\"panel filter-added\"><div class=\"panel-heading\">"+addedFilters[i].name+"<button type=\"button\" id=\""+addedFilters[i].name+"\" class=\"btn btn-primary btn-xs pull-right filter_minus\">-</button></div></div>"+topFilters];
+        topFilters = ["<div class=\"panel filter-added\"><div class=\"panel-heading\">"+addedFilters[i].name+"<button type=\"button\" id=\""+addedFilters[i].name+"\" class=\"btn btn-primary btn-xs pull-right\">-</button></div></div>"+topFilters];
     }
 	if ($("#filter-search").val().length == 0) {
 		sortedFilters = ""; bottomFilters = "";
 		endIndex = 0;
 		for (var j = availableFilters.length-1;j>=endIndex;j--) {
 			if (findEqualName(availableFilters[j].name,relatedFilters)) {
-				sortedFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+availableFilters[j].name+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+sortedFilters];
+				sortedFilters = ["<div class=\"panel filter-not-added\" id=\""+availableFilters[j].name+"\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" class=\"btn btn-primary btn-xs pull-right\">+</button></div></div>"+sortedFilters];
 				moveToFront(availableFilters,j); j++; endIndex++;
 			} else {
-				bottomFilters = ["<div class=\"panel panel-default\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" id=\""+availableFilters[j].name+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"+bottomFilters];
+				bottomFilters = ["<div class=\"panel filter-not-added\" id=\""+availableFilters[j].name+"\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" class=\"btn btn-primary btn-xs pull-right\">+</button></div></div>"+bottomFilters];
 			}
 			$("#filters").html(topFilters+sortedFilters+bottomFilters);
 		}
 	} else {
 		foundFilters = "";
 		for (var j = 0;j < searchedFilters.length;j++) {
-			foundFilters = [foundFilters+"<div class=\"panel panel-default\"><div class=\"panel-body\">"+searchedFilters[j].name+"<button type=\"button\" id=\""+searchedFilters[j].name+"\" class=\"btn btn-primary btn-xs pull-right filter_plus\">+</button></div></div>"];
+			foundFilters = [foundFilters+"<div class=\"panel filter-not-added\"><div class=\"panel-body\" id=\""+searchedFilters[j].name+"\">"+searchedFilters[j].name+"<button type=\"button\" class=\"btn btn-primary btn-xs pull-right\">+</button></div></div>"];
 			$("#filters").html(foundFilters);
 		}
 	}
 	
-    $(".filter_plus").click(function() {
+    $(".filter-not-added").click(function() {
 		searchedFilters = [];
 		$("#filter-search").val("");
         plus_filter_function($(this).attr('id'))
     });
-    $(".filter_minus").click(function() {
+    $(".filter-added").click(function() {
 		searchedFilters = [];
 		$("#filter-search").val("");
         minus_filter_function($(this).attr('id'))
