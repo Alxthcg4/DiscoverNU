@@ -112,6 +112,7 @@ function updateFilters(relatedFilters) {
     $(".filter-not-added").click(function() {
 		searchedFilters = [];
 		$("#filter-search").val("");
+		document.getElementById('filters').scrollTop = 0;
         plus_filter_function($(this).attr('id'))
     });
     $(".filter-added").click(function() {
