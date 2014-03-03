@@ -59,8 +59,8 @@ h7 {
 }
 
 .discovery {
-	width:20.4vw;
-	height:12vw;
+	width:21.08vw;
+	height:12.4vw;
 	float:left;
 	
 	margin:0.1vw;
@@ -84,8 +84,8 @@ h7 {
 	top: calc(100% - 34px);
 
 	padding:0.5vw;
-	width:20.5vw;
-	height:12vw;
+	width:21.18vw;
+	height:12.4vw;
 	
 	transition-property:top;
 	-moz-transition-property: top; /* Firefox 4 */
