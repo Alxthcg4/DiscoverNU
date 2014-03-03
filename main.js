@@ -79,9 +79,10 @@ $(document).ready(function() {
 		search_filter_function();
 		updateFilters(new Array());
 	});
-	$('.navbar-form').on('submit', function(event){
-		event.preventDefault();
-	});
+
+    $("#dropdown ul li a").click(function(){
+		$("#dropdown .btn:first-child").html([$(this).text()+" <span class=\"caret\"></span>"]);
+   });
 });
 
 function updateFilters(relatedFilters) {

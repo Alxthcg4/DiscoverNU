@@ -26,19 +26,24 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <form class="navbar-form navbar-left" role="search" style="width:50%">
+          <form class="navbar-form navbar-left" role="search" style="width:40%" onsubmit="alert('This search bar has not been implemented.')">
             <div class="row">
                 <div class="col-lg">
                   <div class="input-group">
-                    <input type="text" class="form-control">
-                    <div class="input-group-btn">
-                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Search <span class="caret"></span></button>
+                    <input type="text" class="form-control" placeholder="Search Discoveries, Events, Locations, or Users">
+                    <div class="input-group-btn" id="dropdown">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					  Discoveries <span class="caret"></span>
+					  </button>
                       <ul class="dropdown-menu pull-right">
                         <li><a href="#">Discoveries</a></li>
                         <li><a href="#">Events</a></li>
                         <li><a href="#">Locations</a></li>
                         <li><a href="#">Users</a></li>
                       </ul>
+					<button type="button" class="btn btn-default" style="height:34px" onclick="alert('This search bar has not been implemented.')">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
                     </div><!-- /btn-group -->
                   </div><!-- /input-group -->
                 </div><!-- /.col-lg-6 -->
@@ -66,15 +71,13 @@
 
 <body>
 	<div id="sidepanel">
-		<form class="navbar-form navbar-left" role="search" style="width:100%">
-            <div class="row">
-                <div class="col-lg">
-                  <div class="input-group">
-                    <input type="text" class="form-control" id="filter-search" placeholder="Search Filters">
-                  </div><!-- /input-group -->
-                </div><!-- /.col-lg-6 -->
-              </div><!-- /.row -->
-		</form>
+			<div class="row" style="margin:5px">
+				<div class="col-lg">
+				  <div class="input-group">
+					<input type="text" class="form-control" id="filter-search" placeholder="Search Filters">
+				  </div><!-- /input-group -->
+				</div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
 		<div id="filters"></div>
 	</div>
       
