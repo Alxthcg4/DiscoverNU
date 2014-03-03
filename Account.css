@@ -100,7 +100,7 @@ h7 {
 }
 
 .profile_thumb {
-        width:70%; height:auto;
+        width:100%; height:auto;
         margin:1%;
         border-radius: 5px;
         -webkit-border-radius: 5px;
