@@ -109,8 +109,8 @@ function updateFilters(relatedFilters) {
 			} else {
 				bottomFilters = ["<div class=\"panel filter-not-added\" id=\""+availableFilters[j].name+"\"><div class=\"panel-body\">"+availableFilters[j].name+"<button type=\"button\" class=\"btn btn-primary btn-xs pull-right\">+</button></div></div>"+bottomFilters];
 			}
-			$("#filters").html(topFilters+sortedFilters+bottomFilters);
 		}
+		$("#filters").html(topFilters+sortedFilters+bottomFilters);
 	} else {
 		foundFilters = "";
 		for (var j = 0;j < searchedFilters.length;j++) {
